@@ -67,6 +67,10 @@
    gap: 16px;
 }
 
+.form-screan {
+   display: flex;
+}
+
 .form-desc {
    max-width: 500px;
    padding-top: 50px;

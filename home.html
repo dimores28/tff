@@ -318,7 +318,10 @@
         </a>
       </div>
 
-      <!-- screan 4 -->
+      <!-- screan 4 V-->
+      <div class="page-container">
+        <h3 class="text-white-gradient font-medium text-28p leading-8 sm:text-32p sm:leading-10">Trade 24 profit</h3>
+      </div>
       <section class="home-page home-new">
 				<div class="stats">
 					<div class="container">
@@ -342,14 +345,11 @@
 											<button type="button" id="setDay" class="btn-chart v-btn v-btn--contained theme--light v-size--default">
 												<span class="v-btn__content">1 Day</span>
 											</button>
-											<button type="button" class="btn-chart v-btn v-btn--contained theme--light v-size--default">
+											<button type="button" id="setWeek" class="btn-chart v-btn v-btn--contained theme--light v-size--default">
 												<span class="v-btn__content">7 Days</span>
 											</button>
-											<button type="button" class="btn-chart v-btn v-btn--contained theme--light v-size--default">
+											<button type="button" id="setMount" class="btn-chart v-btn v-btn--contained theme--light v-size--default">
 												<span class="v-btn__content">1 Mon</span>
-											</button>
-											<button type="button" class="btn-chart v-btn v-btn--contained theme--light v-size--default active">
-												<span class="v-btn__content">All</span>
 											</button>
 										</div>
 										<div>
@@ -607,11 +607,11 @@
 
       });
 
-      let data = [31, 40, 48, 51, 62, 109, 120];
+      let data = [1.65, 1.73 , 1.73, 1.73, 1.73, 1.73, 1.73];
 
       var options = {
           series: [{
-          name: 'series',
+          name: 'profit',
           data: data,
         }, 
         ],
@@ -638,11 +638,23 @@
         },
         tooltip: {
           enabled: true,
+          shared: true,
+          followCursor: false,
+          intersect: false,
+          inverseOrder: false,
+          custom: undefined,
+          fillSeriesColor: false,
           theme: true,
+          style: {
+            fontSize: '14px',
+          },
           style: {
             fontSize: '12px',
             color: '#00c868',
-            background: '#fff',
+            background: '#333',
+          },
+          x: {
+            format: 'dd/MM/yy HH:mm'
           },
         }
       };
@@ -653,14 +665,42 @@
 
       document.querySelector('#setDay')
       .addEventListener('click', function(){
-        console.log('click');
-        data = [21, 30, 38, 41, 52, 99, 110];
+        data = [1.65, 1.73 , 1.73, 1.73, 1.73, 1.73, 1.73];
 
         chart.updateSeries([{
             data: data
         }]);
       });
 
+      document.querySelector('#setWeek')
+      .addEventListener('click', function(){
+        data = [1.36, 1.42, 1.50, 1.57, 1.65, 1.73, 1.73];
+
+        chart.updateSeries([{
+            data: data
+        }]);
+
+        chart.updateOptions({
+          xaxis: {
+            categories: ["2023-09-19T00:00:00.000Z", "2023-09-20T01:30:00.000Z", "2023-09-21T02:30:00.000Z", "2023-09-22T03:30:00.000Z", "2023-09-23T04:30:00.000Z", "2023-09-24T05:30:00.000Z", "2023-09-25T06:30:00.000Z"]
+          }
+        });
+      });
+
+      document.querySelector('#setMount')
+      .addEventListener('click', function(){
+        data = [0.75, 0.87, 1.06, 1.23, 1.50, 1.65, 1.73];
+
+        chart.updateSeries([{
+            data: data
+        }]);
+
+        chart.updateOptions({
+          xaxis: {
+            categories: ["2023-01-19T00:00:00.000Z", "2023-02-20T01:30:00.000Z", "2023-03-21T02:30:00.000Z", "2023-04-22T03:30:00.000Z", "2023-05-23T04:30:00.000Z", "2023-06-24T05:30:00.000Z", "2023-07-25T06:30:00.000Z"]
+          }
+        });
+      });
 
     </script>
 

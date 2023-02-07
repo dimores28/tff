@@ -114,6 +114,10 @@
    }
 }
 
+.mb-230 {
+   margin-bottom: 230px !important;
+}
+
 
 @media screen and (min-width: 576px)
 {

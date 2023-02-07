@@ -157,93 +157,101 @@
   </div>
 
   <header class="site-header">
-      <div class="page-container">
-          <div class="flex items-center h-68p sm:h-100p relative xs:static">
-              <div class="mr-12p xs:mr-22p w-24p h-24p lg:hidden" x-data="mobileMenu">
-                  <button type="button" id="show">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_611_1343)">
-                        <path d="M1.45898 5.92934H22.5414C23.3458 5.92934 24 5.27516 24 4.4707C24 3.66624 23.3458 3.01172 22.5414 3.01172H1.45898C0.654525 3.01172 0 3.66624 0 4.4707C0 5.27516 0.654525 5.92934 1.45898 5.92934Z" fill="white"></path>
-                        <path d="M22.5414 10.541H1.45898C0.654525 10.541 0 11.1955 0 12C0 12.8045 0.654525 13.4586 1.45898 13.4586H22.5414C23.3458 13.4586 24 12.8045 24 12C24 11.1955 23.3458 10.541 22.5414 10.541Z" fill="white"></path>
-                        <path d="M22.5414 18.0703H1.45898C0.654525 18.0703 0 18.7252 0 19.5296C0 20.3341 0.654525 20.9882 1.45898 20.9882H22.5414C23.3458 20.9882 24 20.3341 24 19.5296C24 18.7252 23.3458 18.0703 22.5414 18.0703Z" fill="white"></path>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_611_1343">
-                          <rect width="24" height="24" fill="white"></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </button>
-              </div>
-              <a href="/" class="flex-shrink-0">
-                  <img src="https://trueforexfunds.com/wp-content/themes/tff/img/logo1.svg" class="w-60p h-24p sm:w-88p sm:h-40p">
-              </a>
-              <ul id="main-menu" class="menu">
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-35 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-53"><a href="https://trueforexfunds.com/" aria-current="page"><span>Home</span><span><svg width="8" height="5" viewBox="0 0 8 5"><path d="M7.0632 4.9368L4 0.928932L0.936797 4.9368H7.0632Z"></path></svg></span></a>
-                      <ul class="sub-menu">
-                          <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-138"><a href="/#benefits" aria-current="page"><span>Benefits</span></a></li>
-                          <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-139"><a href="/#how" aria-current="page"><span>How it works</span></a></li>
-                          <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-140"><a href="/#pricing" aria-current="page"><span>Pricing</span></a></li>
-                      </ul>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-268"><a href="https://trueforexfunds.com/blog/"><span>Blog</span></a></li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://trueforexfunds.com/assistance-and-guidance/"><span>Assistance</span></a></li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="https://trueforexfunds.com/leaderboard/"><span>Leaderboard</span></a></li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388"><a href="https://trueforexfunds.com/payouts/"><span>Payouts</span></a></li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://trueforexfunds.com/contact/"><span>Contact</span></a></li>
-            </ul>
-            <div class="ml-auto flex gap-8p sm:gap-16p pl-12p xs:relative" x-data="ctrader">
-                  <button type="button" class="btn btn-ctrader-red text-xs max-w-[100px] sm:text-sm sm:max-w-[144px]" x-id="['ctrader-button']" x-ref="button" x-on:click="toggle()" :class="{'open': open}">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 857 195" width="74" height="18" version="1.1">
-                      <path fill="currentColor" d="m67.543,162.44952c-6.369,0 -18.747,-1.703 -18.747,-18.782c0,-8.283 2,-18.43 4.366,-25.271c6.736,-19.79 19.89,-23.446 28.074,-23.446l38.434,0l5.695,-30.523l-47.464,0c-10.924,0 -34.223,2.095 -52.79,18.98c-16.012,14.515 -25.111,40.598 -25.111,60.388c0,21.439 9.099,51.332 52.047,51.332l47.481,0l6.563,-32.678l-38.548,0z"></path>
-                      <path fill="currentColor" d="m94.8118,0l-8.12,39.791l66.331,0l-30.063,155.353l55.734,0l29.998,-155.353l64.668,0l8.062,-39.791l-186.61,0z"></path>
-                      <path fill-rule="evenodd" fill="currentColor" d="m559.09798,139.74518c-6.73,20.074 -19.485,21.794 -27.699,21.794l-9.068,0l13.024,-66.589l9.384,0.115c6.353,0 18.72,1.32 18.72,18.64c0,8.361 -1.964,19.149 -4.361,26.04m-165.616,-2.924l19.823,-42.373l0.744,0l3.207,42.373l-23.774,0zm448.71,-66.558c-8.078,-4.643 -14.833,-5.836 -30.903,-5.836l-191.872,0l-6.666,33.261c-1.326,-4.733 -3.36,-9.11 -6.206,-13.345c-3.137,-4.544 -7.232,-8.468 -12.713,-11.615c-4.247,-2.506 -9.241,-5.004 -15.166,-6.223c-4.677,-0.967 -9.898,-2.078 -15.718,-2.078l-71.503,0l-21.225,108.253l-16.638,-108.253l-65.787,0l-63.492,115.538l-0.352,-24.013c-0.098,-7.483 -2.586,-12.551 -6.114,-16.19c-4.223,-4.333 -9.868,-6.264 -14.661,-6.897l0.2,-0.31c7.551,-1.038 14.436,-3.634 20.117,-7.465c10.305,-6.86 16.827,-17.69 16.827,-30.207c0,-11.941 -6.405,-20.609 -15.279,-25.154c-6.048,-3.158 -13.318,-5.302 -20.373,-5.302l-84.309,0l-6.011,30.556l58.363,-0.076c3.274,0 16.45,-0.11 16.45,11.014c0,3.176 -0.76,8.261 -6.388,11.926c-3.401,2.172 -9.526,3.073 -17.349,3.073l-56.239,0l-14.408,74.174l47.176,0l9.137,-45.91l10.927,0c3.138,0 7.518,0.283 10.292,3.317c1.745,1.876 2.835,5.532 2.621,9.881l-1.442,32.712l92.6,0l11.485,-24.717l42.254,0l1.839,24.717l115.378,0c10.902,0 34.268,-2.169 52.876,-19.124c3.523,-3.224 6.716,-6.547 9.521,-10.603l-5.914,29.727l103.458,0l6.485,-33.555l-55.425,0l3.62,-17.652l46.243,0l5.878,-30.016l-46.24,0l3.67,-18.873l127.356,-0.066c7.826,0 16.706,1.654 16.706,10.592c0,9.909 -7.787,15.396 -17.374,15.396l-64.25,0l-14.394,74.174l48.934,0l9.138,-45.91l10.901,0c3.138,0 7.59,0.216 10.389,3.317c1.668,1.892 2.713,5.648 2.53,9.843l-1.495,32.75l50.893,0l-0.536,-37.971c-0.061,-8.006 -2.921,-13.955 -6.874,-17.628c-4.114,-3.794 -9.368,-5.836 -13.859,-6.449l0.194,-0.475c9.138,-1.295 17.302,-4.888 23.58,-10.155c8.236,-6.8 13.334,-16.845 13.334,-27.867c0,-11.382 -5.95,-19.543 -14.197,-24.286"></path>
-                      </svg>          
-                  </button>
-                  <a href="https://app.trueforexfunds.com/" class="btn text-xs max-w-[120px] sm:text-sm sm:max-w-[200px] w-[200px]">Client area</a>
-                  <div class="ctrader-dialog p-20p xs:p-32p rounded-20p absolute top-full left-0 xs:left-auto right-0 z-max xs:mt-16p xs:w-[440px]" :class="{hidden: !inited}" x-ref="panel" x-on:click.outside="close($refs.button)" x-show="open" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" style="display: none;">
-                      <form class="text-white text-sm sm:text-base space-y-20p" @submit.prevent="submit">
-                          <div class="flex items-center justify-between">
-                              <h3 class="text-white-gradient text-xl font-medium">Join the waiting list!</h3>
-                              <div class="color-white">
-                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 857 195" width="74" height="18" version="1.1">
-                                  <path fill="currentColor" d="m67.543,162.44952c-6.369,0 -18.747,-1.703 -18.747,-18.782c0,-8.283 2,-18.43 4.366,-25.271c6.736,-19.79 19.89,-23.446 28.074,-23.446l38.434,0l5.695,-30.523l-47.464,0c-10.924,0 -34.223,2.095 -52.79,18.98c-16.012,14.515 -25.111,40.598 -25.111,60.388c0,21.439 9.099,51.332 52.047,51.332l47.481,0l6.563,-32.678l-38.548,0z"></path>
-                                  <path fill="currentColor" d="m94.8118,0l-8.12,39.791l66.331,0l-30.063,155.353l55.734,0l29.998,-155.353l64.668,0l8.062,-39.791l-186.61,0z"></path>
-                                  <path fill-rule="evenodd" fill="currentColor" d="m559.09798,139.74518c-6.73,20.074 -19.485,21.794 -27.699,21.794l-9.068,0l13.024,-66.589l9.384,0.115c6.353,0 18.72,1.32 18.72,18.64c0,8.361 -1.964,19.149 -4.361,26.04m-165.616,-2.924l19.823,-42.373l0.744,0l3.207,42.373l-23.774,0zm448.71,-66.558c-8.078,-4.643 -14.833,-5.836 -30.903,-5.836l-191.872,0l-6.666,33.261c-1.326,-4.733 -3.36,-9.11 -6.206,-13.345c-3.137,-4.544 -7.232,-8.468 -12.713,-11.615c-4.247,-2.506 -9.241,-5.004 -15.166,-6.223c-4.677,-0.967 -9.898,-2.078 -15.718,-2.078l-71.503,0l-21.225,108.253l-16.638,-108.253l-65.787,0l-63.492,115.538l-0.352,-24.013c-0.098,-7.483 -2.586,-12.551 -6.114,-16.19c-4.223,-4.333 -9.868,-6.264 -14.661,-6.897l0.2,-0.31c7.551,-1.038 14.436,-3.634 20.117,-7.465c10.305,-6.86 16.827,-17.69 16.827,-30.207c0,-11.941 -6.405,-20.609 -15.279,-25.154c-6.048,-3.158 -13.318,-5.302 -20.373,-5.302l-84.309,0l-6.011,30.556l58.363,-0.076c3.274,0 16.45,-0.11 16.45,11.014c0,3.176 -0.76,8.261 -6.388,11.926c-3.401,2.172 -9.526,3.073 -17.349,3.073l-56.239,0l-14.408,74.174l47.176,0l9.137,-45.91l10.927,0c3.138,0 7.518,0.283 10.292,3.317c1.745,1.876 2.835,5.532 2.621,9.881l-1.442,32.712l92.6,0l11.485,-24.717l42.254,0l1.839,24.717l115.378,0c10.902,0 34.268,-2.169 52.876,-19.124c3.523,-3.224 6.716,-6.547 9.521,-10.603l-5.914,29.727l103.458,0l6.485,-33.555l-55.425,0l3.62,-17.652l46.243,0l5.878,-30.016l-46.24,0l3.67,-18.873l127.356,-0.066c7.826,0 16.706,1.654 16.706,10.592c0,9.909 -7.787,15.396 -17.374,15.396l-64.25,0l-14.394,74.174l48.934,0l9.138,-45.91l10.901,0c3.138,0 7.59,0.216 10.389,3.317c1.668,1.892 2.713,5.648 2.53,9.843l-1.495,32.75l50.893,0l-0.536,-37.971c-0.061,-8.006 -2.921,-13.955 -6.874,-17.628c-4.114,-3.794 -9.368,-5.836 -13.859,-6.449l0.194,-0.475c9.138,-1.295 17.302,-4.888 23.58,-10.155c8.236,-6.8 13.334,-16.845 13.334,-27.867c0,-11.382 -5.95,-19.543 -14.197,-24.286"></path>
-                                  </svg>      
-                              </div>
-                          </div>
-                          <div class="space-y-10p">
-                              <div class="flex gap-10p">
-                                <input x-ref="firstname" type="text" name="firstname" class="!bg-input autofill:bg-input opacity-80 rounded-12p border border-white/20 block w-full text-base py-8p px-16p outline-none focus:border-primary-500 transition-colors placeholder:text-white/20" placeholder="First Name" required="" minlength="3" x-model="firstname">
-                        
-                                <input x-ref="lastname" type="text" name="lastname" class="!bg-input autofill:bg-input opacity-80 rounded-12p border border-white/20 block w-full text-base py-8p px-16p outline-none focus:border-primary-500 transition-colors placeholder:text-white/20" placeholder="Last Name" required="" minlength="3" x-model="lastname">
-                              </div>
-                        
-                              <input type="email" name="email" class="!bg-input autofill:bg-input opacity-80 rounded-12p border border-white/20 block w-full text-base py-8p px-16p outline-none focus:border-primary-500 transition-colors placeholder:text-white/20" placeholder="Email" required="" x-model="email">
-                          </div>
-                          <div class="flex items-center select-none">
-                              <div class="checkbox">
-                                <input name="accept_terms" type="checkbox" required="" x-model="terms">
-                                <span></span>
-                              </div>
-                              <div class="ml-3">
-                                <label for="accept-terms" class="text-white/60 cursor-pointer text-xs xs:text-sm" @click.prevent="terms=!terms">I sign up to the Newsletter.</label>
-                              </div>
-                          </div>
-                          <button type="submit" class="btn btn-ctrader-submit transition-colors duration-300 block max-w-none mt-24p text-sm sm:text-base sm:mt-40p w-full disabled:opacity-60" :disabled="sending">Submit</button>
-                          <div class="text-white/40 text-xs text-center">
-                              This site is protected by reCAPTCHA and the Google 
-                              <a href="https://policies.google.com/privacy" target="_blank" class="text-primary-500 hover:text-white">Privacy Policy</a> and
-                              <a href="https://policies.google.com/terms" target="_blank" class="text-primary-500 hover:text-white">Terms of Service</a> apply.
-                          </div>
-                      </form>
-                  </div>
-            </div>  
-          </div>
-      </div>
+    <div class="page-container">
+        <div class="flex items-center h-68p sm:h-100p relative xs:static">
+            <div class="mr-12p xs:mr-22p w-24p h-24p lg:hidden" x-data="mobileMenu">
+                <button type="button" id="show">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_611_1343)">
+                      <path d="M1.45898 5.92934H22.5414C23.3458 5.92934 24 5.27516 24 4.4707C24 3.66624 23.3458 3.01172 22.5414 3.01172H1.45898C0.654525 3.01172 0 3.66624 0 4.4707C0 5.27516 0.654525 5.92934 1.45898 5.92934Z" fill="white"></path>
+                      <path d="M22.5414 10.541H1.45898C0.654525 10.541 0 11.1955 0 12C0 12.8045 0.654525 13.4586 1.45898 13.4586H22.5414C23.3458 13.4586 24 12.8045 24 12C24 11.1955 23.3458 10.541 22.5414 10.541Z" fill="white"></path>
+                      <path d="M22.5414 18.0703H1.45898C0.654525 18.0703 0 18.7252 0 19.5296C0 20.3341 0.654525 20.9882 1.45898 20.9882H22.5414C23.3458 20.9882 24 20.3341 24 19.5296C24 18.7252 23.3458 18.0703 22.5414 18.0703Z" fill="white"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_611_1343">
+                        <rect width="24" height="24" fill="white"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+            </div>
+            <a href="home.html" class="flex-shrink-0">
+                <img src="https://trueforexfunds.com/wp-content/themes/tff/img/logo1.svg" class="w-60p h-24p sm:w-88p sm:h-40p">
+            </a>
+            <ul id="main-menu" class="menu">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-35 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-53">
+                  <a href="home.html" aria-current="page">
+                    <span>Home</span>
+                    <span>
+                      <svg width="8" height="5" viewBox="0 0 8 5">
+                        <path d="M7.0632 4.9368L4 0.928932L0.936797 4.9368H7.0632Z"></path>
+                      </svg>
+                    </span>
+                  </a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-138"><a href="/#benefits" aria-current="page"><span>Benefits</span></a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-139"><a href="/#how" aria-current="page"><span>How it works</span></a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-140"><a href="/#pricing" aria-current="page"><span>Pricing</span></a></li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-268"><a href="blog.html"><span>Blog</span></a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://trueforexfunds.com/assistance-and-guidance/"><span>Assistance</span></a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="https://trueforexfunds.com/leaderboard/"><span>Leaderboard</span></a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388"><a href="https://trueforexfunds.com/payouts/"><span>Payouts</span></a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="contacts.html"><span>Contact</span></a></li>
+          </ul>
+          <div class="ml-auto flex gap-8p sm:gap-16p pl-12p xs:relative" x-data="ctrader">
+                <button type="button" class="btn btn-ctrader-red text-xs max-w-[100px] sm:text-sm sm:max-w-[144px]" x-id="['ctrader-button']" x-ref="button" x-on:click="toggle()" :class="{'open': open}">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 857 195" width="74" height="18" version="1.1">
+                    <path fill="currentColor" d="m67.543,162.44952c-6.369,0 -18.747,-1.703 -18.747,-18.782c0,-8.283 2,-18.43 4.366,-25.271c6.736,-19.79 19.89,-23.446 28.074,-23.446l38.434,0l5.695,-30.523l-47.464,0c-10.924,0 -34.223,2.095 -52.79,18.98c-16.012,14.515 -25.111,40.598 -25.111,60.388c0,21.439 9.099,51.332 52.047,51.332l47.481,0l6.563,-32.678l-38.548,0z"></path>
+                    <path fill="currentColor" d="m94.8118,0l-8.12,39.791l66.331,0l-30.063,155.353l55.734,0l29.998,-155.353l64.668,0l8.062,-39.791l-186.61,0z"></path>
+                    <path fill-rule="evenodd" fill="currentColor" d="m559.09798,139.74518c-6.73,20.074 -19.485,21.794 -27.699,21.794l-9.068,0l13.024,-66.589l9.384,0.115c6.353,0 18.72,1.32 18.72,18.64c0,8.361 -1.964,19.149 -4.361,26.04m-165.616,-2.924l19.823,-42.373l0.744,0l3.207,42.373l-23.774,0zm448.71,-66.558c-8.078,-4.643 -14.833,-5.836 -30.903,-5.836l-191.872,0l-6.666,33.261c-1.326,-4.733 -3.36,-9.11 -6.206,-13.345c-3.137,-4.544 -7.232,-8.468 -12.713,-11.615c-4.247,-2.506 -9.241,-5.004 -15.166,-6.223c-4.677,-0.967 -9.898,-2.078 -15.718,-2.078l-71.503,0l-21.225,108.253l-16.638,-108.253l-65.787,0l-63.492,115.538l-0.352,-24.013c-0.098,-7.483 -2.586,-12.551 -6.114,-16.19c-4.223,-4.333 -9.868,-6.264 -14.661,-6.897l0.2,-0.31c7.551,-1.038 14.436,-3.634 20.117,-7.465c10.305,-6.86 16.827,-17.69 16.827,-30.207c0,-11.941 -6.405,-20.609 -15.279,-25.154c-6.048,-3.158 -13.318,-5.302 -20.373,-5.302l-84.309,0l-6.011,30.556l58.363,-0.076c3.274,0 16.45,-0.11 16.45,11.014c0,3.176 -0.76,8.261 -6.388,11.926c-3.401,2.172 -9.526,3.073 -17.349,3.073l-56.239,0l-14.408,74.174l47.176,0l9.137,-45.91l10.927,0c3.138,0 7.518,0.283 10.292,3.317c1.745,1.876 2.835,5.532 2.621,9.881l-1.442,32.712l92.6,0l11.485,-24.717l42.254,0l1.839,24.717l115.378,0c10.902,0 34.268,-2.169 52.876,-19.124c3.523,-3.224 6.716,-6.547 9.521,-10.603l-5.914,29.727l103.458,0l6.485,-33.555l-55.425,0l3.62,-17.652l46.243,0l5.878,-30.016l-46.24,0l3.67,-18.873l127.356,-0.066c7.826,0 16.706,1.654 16.706,10.592c0,9.909 -7.787,15.396 -17.374,15.396l-64.25,0l-14.394,74.174l48.934,0l9.138,-45.91l10.901,0c3.138,0 7.59,0.216 10.389,3.317c1.668,1.892 2.713,5.648 2.53,9.843l-1.495,32.75l50.893,0l-0.536,-37.971c-0.061,-8.006 -2.921,-13.955 -6.874,-17.628c-4.114,-3.794 -9.368,-5.836 -13.859,-6.449l0.194,-0.475c9.138,-1.295 17.302,-4.888 23.58,-10.155c8.236,-6.8 13.334,-16.845 13.334,-27.867c0,-11.382 -5.95,-19.543 -14.197,-24.286"></path>
+                    </svg>          
+                </button>
+                <a href="https://app.trueforexfunds.com/" class="btn text-xs max-w-[120px] sm:text-sm sm:max-w-[200px] w-[200px]">Client area</a>
+                <div class="ctrader-dialog p-20p xs:p-32p rounded-20p absolute top-full left-0 xs:left-auto right-0 z-max xs:mt-16p xs:w-[440px]" x-ref="panel" x-on:click.outside="close($refs.button)" x-show="open" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" style="display: none;">
+                    <form class="text-white text-sm sm:text-base space-y-20p">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-white-gradient text-xl font-medium">Join the waiting list!</h3>
+                            <div class="color-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 857 195" width="74" height="18" version="1.1">
+                                <path fill="currentColor" d="m67.543,162.44952c-6.369,0 -18.747,-1.703 -18.747,-18.782c0,-8.283 2,-18.43 4.366,-25.271c6.736,-19.79 19.89,-23.446 28.074,-23.446l38.434,0l5.695,-30.523l-47.464,0c-10.924,0 -34.223,2.095 -52.79,18.98c-16.012,14.515 -25.111,40.598 -25.111,60.388c0,21.439 9.099,51.332 52.047,51.332l47.481,0l6.563,-32.678l-38.548,0z"></path>
+                                <path fill="currentColor" d="m94.8118,0l-8.12,39.791l66.331,0l-30.063,155.353l55.734,0l29.998,-155.353l64.668,0l8.062,-39.791l-186.61,0z"></path>
+                                <path fill-rule="evenodd" fill="currentColor" d="m559.09798,139.74518c-6.73,20.074 -19.485,21.794 -27.699,21.794l-9.068,0l13.024,-66.589l9.384,0.115c6.353,0 18.72,1.32 18.72,18.64c0,8.361 -1.964,19.149 -4.361,26.04m-165.616,-2.924l19.823,-42.373l0.744,0l3.207,42.373l-23.774,0zm448.71,-66.558c-8.078,-4.643 -14.833,-5.836 -30.903,-5.836l-191.872,0l-6.666,33.261c-1.326,-4.733 -3.36,-9.11 -6.206,-13.345c-3.137,-4.544 -7.232,-8.468 -12.713,-11.615c-4.247,-2.506 -9.241,-5.004 -15.166,-6.223c-4.677,-0.967 -9.898,-2.078 -15.718,-2.078l-71.503,0l-21.225,108.253l-16.638,-108.253l-65.787,0l-63.492,115.538l-0.352,-24.013c-0.098,-7.483 -2.586,-12.551 -6.114,-16.19c-4.223,-4.333 -9.868,-6.264 -14.661,-6.897l0.2,-0.31c7.551,-1.038 14.436,-3.634 20.117,-7.465c10.305,-6.86 16.827,-17.69 16.827,-30.207c0,-11.941 -6.405,-20.609 -15.279,-25.154c-6.048,-3.158 -13.318,-5.302 -20.373,-5.302l-84.309,0l-6.011,30.556l58.363,-0.076c3.274,0 16.45,-0.11 16.45,11.014c0,3.176 -0.76,8.261 -6.388,11.926c-3.401,2.172 -9.526,3.073 -17.349,3.073l-56.239,0l-14.408,74.174l47.176,0l9.137,-45.91l10.927,0c3.138,0 7.518,0.283 10.292,3.317c1.745,1.876 2.835,5.532 2.621,9.881l-1.442,32.712l92.6,0l11.485,-24.717l42.254,0l1.839,24.717l115.378,0c10.902,0 34.268,-2.169 52.876,-19.124c3.523,-3.224 6.716,-6.547 9.521,-10.603l-5.914,29.727l103.458,0l6.485,-33.555l-55.425,0l3.62,-17.652l46.243,0l5.878,-30.016l-46.24,0l3.67,-18.873l127.356,-0.066c7.826,0 16.706,1.654 16.706,10.592c0,9.909 -7.787,15.396 -17.374,15.396l-64.25,0l-14.394,74.174l48.934,0l9.138,-45.91l10.901,0c3.138,0 7.59,0.216 10.389,3.317c1.668,1.892 2.713,5.648 2.53,9.843l-1.495,32.75l50.893,0l-0.536,-37.971c-0.061,-8.006 -2.921,-13.955 -6.874,-17.628c-4.114,-3.794 -9.368,-5.836 -13.859,-6.449l0.194,-0.475c9.138,-1.295 17.302,-4.888 23.58,-10.155c8.236,-6.8 13.334,-16.845 13.334,-27.867c0,-11.382 -5.95,-19.543 -14.197,-24.286"></path>
+                                </svg>      
+                            </div>
+                        </div>
+                        <div class="space-y-10p">
+                            <div class="flex gap-10p">
+                              <input x-ref="firstname" type="text" name="firstname" class="!bg-input autofill:bg-input opacity-80 rounded-12p border border-white/20 block w-full text-base py-8p px-16p outline-none focus:border-primary-500 transition-colors placeholder:text-white/20" placeholder="First Name" required="" minlength="3" x-model="firstname">
+                      
+                              <input x-ref="lastname" type="text" name="lastname" class="!bg-input autofill:bg-input opacity-80 rounded-12p border border-white/20 block w-full text-base py-8p px-16p outline-none focus:border-primary-500 transition-colors placeholder:text-white/20" placeholder="Last Name" required="" minlength="3" x-model="lastname">
+                            </div>
+                      
+                            <input type="email" name="email" class="!bg-input autofill:bg-input opacity-80 rounded-12p border border-white/20 block w-full text-base py-8p px-16p outline-none focus:border-primary-500 transition-colors placeholder:text-white/20" placeholder="Email" required="" x-model="email">
+                        </div>
+                        <div class="flex items-center select-none">
+                            <div class="checkbox">
+                              <input name="accept_terms" type="checkbox" required="" x-model="terms">
+                              <span></span>
+                            </div>
+                            <div class="ml-3">
+                              <label for="accept-terms" class="text-white/60 cursor-pointer text-xs xs:text-sm">I sign up to the Newsletter.</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-ctrader-submit transition-colors duration-300 block max-w-none mt-24p text-sm sm:text-base sm:mt-40p w-full disabled:opacity-60" :disabled="sending">Submit</button>
+                        <div class="text-white/40 text-xs text-center">
+                            This site is protected by reCAPTCHA and the Google 
+                            <a href="https://policies.google.com/privacy" target="_blank" class="text-primary-500 hover:text-white">Privacy Policy</a> and
+                            <a href="https://policies.google.com/terms" target="_blank" class="text-primary-500 hover:text-white">Terms of Service</a> apply.
+                        </div>
+                    </form>
+                </div>
+          </div>  
+        </div>
+    </div>
   </header>
-
+  
   <main class="site-main">
       <div class="bg-home"></div>
 

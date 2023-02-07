@@ -92,6 +92,7 @@
 <body class="home page-template page-template-template-home page-template-template-home-php page page-id-35">
 
 <div id="site">
+  <!-- mobile menu -->
   <div class="fixed z-max inset-0 overflow-y-auto" x-data="mobileMenu" x-show="$store.showMenu" id="mobileMenu" style="display: none;">
     <div class="flex items-center justify-center min-h-screen p-4">
       <div x-show="$store.showMenu" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 transition-opacity backdrop-blur-2xl bg-black/35 mobile-menu-backdrop" aria-hidden="true"></div>
@@ -100,9 +101,61 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4142 12.0002L17.7072 7.70725C18.0982 7.31625 18.0982 6.68425 17.7072 6.29325C17.3162 5.90225 16.6842 5.90225 16.2933 6.29325L12.0002 10.5862L7.70725 6.29325C7.31625 5.90225 6.68425 5.90225 6.29325 6.29325C5.90225 6.68425 5.90225 7.31625 6.29325 7.70725L10.5862 12.0002L6.29325 16.2933C5.90225 16.6842 5.90225 17.3162 6.29325 17.7072C6.48825 17.9022 6.74425 18.0002 7.00025 18.0002C7.25625 18.0002 7.51225 17.9022 7.70725 17.7072L12.0002 13.4142L16.2933 17.7072C16.4882 17.9022 16.7443 18.0002 17.0002 18.0002C17.2562 18.0002 17.5122 17.9022 17.7072 17.7072C18.0982 17.3162 18.0982 16.6842 17.7072 16.2933L13.4142 12.0002Z" fill="white"></path>
         </svg>
       </button>
-      <ul x-show="$store.showMenu" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" id="mobile-menu" class="menu"><li x-data="{show: false}" :class="{open: show}" id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-35 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-53"><a href="https://trueforexfunds.com/" aria-current="page"><span>Home</span><span :class="{'rotate-0': show}" @click.prevent="show = !show"><svg width="21" height="20" viewBox="0 0 21 20"><path d="M10.5033 6.09424C10.2094 6.09424 9.95642 6.21045 9.73084 6.43603L4.61072 11.686C4.43298 11.8638 4.33728 12.0825 4.33728 12.3423C4.33728 12.8755 4.76111 13.2993 5.28748 13.2993C5.54724 13.2993 5.79334 13.1968 5.98474 13.0054L10.4965 8.35693L15.015 13.0054C15.2064 13.1899 15.4457 13.2993 15.7123 13.2993C16.2386 13.2993 16.6625 12.8755 16.6625 12.3423C16.6625 12.0825 16.5668 11.8638 16.389 11.6792L11.2689 6.43603C11.0297 6.20361 10.7904 6.09424 10.5033 6.09424Z"></path></svg></span></a><div x-show="show" x-collapse="" style="display: none; height: 0px; overflow: hidden;" hidden=""><ul class="sub-menu"><li id="menu-item-138" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-138"><a @click="hide" href="/#benefits" aria-current="page"><span>Benefits</span></a></li><li id="menu-item-139" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-139"><a @click="hide" href="/#how" aria-current="page"><span>How it works</span></a></li><li id="menu-item-140" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-140"><a @click="hide" href="/#pricing" aria-current="page"><span>Pricing</span></a></li></ul></div></li><li id="menu-item-268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-268"><a href="https://trueforexfunds.com/blog/"><span>Blog</span></a></li><li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://trueforexfunds.com/assistance-and-guidance/"><span>Assistance</span></a></li><li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="https://trueforexfunds.com/leaderboard/"><span>Leaderboard</span></a></li><li id="menu-item-388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388"><a href="https://trueforexfunds.com/payouts/"><span>Payouts</span></a></li><li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://trueforexfunds.com/contact/"><span>Contact</span></a></li></ul>  </div>
+      <ul x-show="$store.showMenu" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" id="mobile-menu" class="menu">
+        <li x-data="{show: false}" :class="{open: show}" id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-35 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-53">
+          <a href="home.html" aria-current="page"><span>Home</span>
+            <span :class="{'rotate-0': show}" @click.prevent="show = !show">
+              <svg width="21" height="20" viewBox="0 0 21 20"><path d="M10.5033 6.09424C10.2094 6.09424 9.95642 6.21045 9.73084 6.43603L4.61072 11.686C4.43298 11.8638 4.33728 12.0825 4.33728 12.3423C4.33728 12.8755 4.76111 13.2993 5.28748 13.2993C5.54724 13.2993 5.79334 13.1968 5.98474 13.0054L10.4965 8.35693L15.015 13.0054C15.2064 13.1899 15.4457 13.2993 15.7123 13.2993C16.2386 13.2993 16.6625 12.8755 16.6625 12.3423C16.6625 12.0825 16.5668 11.8638 16.389 11.6792L11.2689 6.43603C11.0297 6.20361 10.7904 6.09424 10.5033 6.09424Z"></path>
+              </svg>
+            </span>
+          </a>
+          <div x-show="show" x-collapse="" style="display: none; height: 0px; overflow: hidden;" hidden="">
+            <ul class="sub-menu">
+              <li id="menu-item-138" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-138">
+                <a @click="hide" href="/#benefits" aria-current="page"><span>Benefits</span></a>
+              </li>
+              <li id="menu-item-139" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-139">
+                <a @click="hide" href="/#how" aria-current="page">
+                  <span>How it works</span>
+                </a>
+              </li>
+              <li id="menu-item-140" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-140">
+                <a @click="hide" href="/#pricing" aria-current="page">
+                  <span>Pricing</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id="menu-item-268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-268">
+          <a href="https://trueforexfunds.com/blog/">
+            <span>Blog</span>
+          </a>
+        </li>
+        <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48">
+          <a href="https://trueforexfunds.com/assistance-and-guidance/">
+            <span>Assistance</span>
+          </a>
+        </li>
+        <li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244">
+          <a href="https://trueforexfunds.com/leaderboard/">
+            <span>Leaderboard</span>
+          </a>
+        </li>
+        <li id="menu-item-388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388">
+          <a href="https://trueforexfunds.com/payouts/">
+            <span>Payouts</span>
+          </a>
+        </li>
+        <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
+          <a href="contacts.html">
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>  
+    </div>
   </div>
-
+  
   <header class="site-header">
       <div class="page-container">
           <div class="flex items-center h-68p sm:h-100p relative xs:static">

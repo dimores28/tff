@@ -168,3 +168,10 @@
       transform: translateX(-100%)
    }
 }
+
+.crypto-card {
+   position: fixed;
+   right: 25px;
+   bottom: 25px;
+   animation: all .2s
+}

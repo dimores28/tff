@@ -174,7 +174,12 @@
    right: 25px;
    bottom: 25px;
    animation: fadeIn 0.2s;
-   max-width: 160px;
+   max-width: 200px;
+}
+
+.crypto-card img {
+   width: 24px;
+   height: 24px;
 }
 
 @keyframes fadeIn {

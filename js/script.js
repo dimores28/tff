@@ -5,9 +5,9 @@ hideBtn.addEventListener("click", function () {
 
 let btnShow = document.querySelector("#show");
 btnShow.addEventListener("click", function () {
-  console.log("show");
   document.querySelector("#mobileMenu").style.display = "block";
 });
+
 
 let data = [1.65, 1.73, 1.73, 1.73, 1.73, 1.73, 1.73];
 
@@ -141,7 +141,19 @@ document
   });
 
 
+  // По этим транзакциям думал так:
 
+  // [Покупка или продажа] [количество монет рандом от 50 до 5000 для всех монет, кроме BTC и ETH, у них от 0.01 до 2.5] [монета, например USDT, BTC] на бирже [название биржи].
+  
+  // Логотип слева от тикера монеты маленький логотип 24*24px. Слева от всей строчки с небольшим марджином логотип биржи 24*24px.
+  
+  // Разрешение картинок сделать максимально ниже до размера отображения. При 24px должна быть картинка 48px, с учетом плотности пикселей на ретина дисплеях и всё такое.
+  
+  // Сделать таких строчек с покупками/продажами шесть и в каждой рандомом меняются значения сумм, валют и бирж.
+  
+  // 50 валют: coinmarketcap.com
+  
+  // Список бирж: 'binance', 'huobi', 'okx', 'KuCoin', 'CryptoCom', 'Bitget', 'Bitfinex', 'Kraken'.
 
 
 function guaranteeCard() {
@@ -156,8 +168,8 @@ function guaranteeCard() {
   let crypto = generateRandomInteger(500, 5000);
   let currency= generateRandomInteger(500, 5000);
 
-  console.log('crypto: ', crypto);
-  console.log('currency: ', currency);
+  // console.log('crypto: ', crypto);
+  // console.log('currency: ', currency);
 
 
    let card = `<div class="bg-box rounded-24p p-20p flex items-center sm:flex-col sm:items-start idea-card">

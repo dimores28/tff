@@ -146,21 +146,31 @@ document
 
 function guaranteeCard() {
 
-  const exchanges = ['binance', 'huobi', 'okx'];
-  let exc = Math.trunc(getRandomArbitrary(0, 2));
+  const exchanges = ['binance', 'huobi', 'okx', 'KuCoin', 'CryptoCom', 'Bitget', 'Bitfinex', 'Kraken']; // 8
+  const stablecoins = ['USDT', 'USDC', 'BUSD', 'DAI', 'TrueUSD', 'UST', 'FRAX', 'TUSD', 'USDP', 'FEI']; //10
+  const cryptocurrencies = [
+    'BTC', 'ETH', 'BCH', 'XRP', 'LTC', 'MIOTA', 'ADA', 'Dash', 'Nem', 'XMR', 'ADA', 'SOL', 'DOT', 'LTC', 'AVAX', 'MATIC', 'UNI', 'BNB', 'SHIB', 'TRX', 'LINK', 'ETC', 'TON', 'NEAR', 'ICP', 'HT', 'CRO'
+  ]; //27
+
+  let exc = generateRandomInteger(0, 7);
+  let crypto = generateRandomInteger(500, 5000);
+  let currency= generateRandomInteger(500, 5000);
+
+  console.log('crypto: ', crypto);
+  console.log('currency: ', currency);
 
 
-   let card = `<div class="bg-box rounded-24p p-20p sm:p-40p flex items-center sm:flex-col sm:items-start idea-card">
-                  <img src="images/exchanges/${exchanges[exc]}.png" class="mr-20p sm:w-48p sm:h-48p sm:mb-28p idea-card__img"/>
+   let card = `<div class="bg-box rounded-24p p-20p flex items-center sm:flex-col sm:items-start idea-card">
+                  <img src="images/exchanges/${exchanges[exc]}.png" class="mr-20p sm:w-48p sm:h-48p sm:mb-8p idea-card__img"/>
                   <div>
-                     <h3 class="font-medium mb-4p sm:mb-8p text-base sm:text-20p sm:leading-6">
-                        Crypto
-                     </h3>
                      <div class="mt-8p text-sm leading-5 text-white/60">
-                        Crypto
+                        ${cryptocurrencies[generateRandomInteger(0, 26)]} - ${crypto} $
                      </div>
                      <div class="mt-8p text-sm leading-5 text-white/60">
-                        BITMEX FUTURES
+                        ${stablecoins[generateRandomInteger(0, 9)]} - ${currency} $
+                     </div>
+                     <div class="mt-8p text-sm leading-5 text-white/60">
+                        Total: ${crypto + currency} $
                      </div>
                   </div>
                </div>`;
@@ -175,8 +185,8 @@ function guaranteeCard() {
 }
 
 
-// setInterval(guaranteeCard, 1000);
+setInterval(guaranteeCard, 1000);
 
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+function generateRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }

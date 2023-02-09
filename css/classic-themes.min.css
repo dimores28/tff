@@ -173,5 +173,6 @@
    position: fixed;
    right: 25px;
    bottom: 25px;
-   animation: all .2s
+   animation: all .2s;
+   max-width: 150px;
 }

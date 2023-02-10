@@ -141,7 +141,7 @@ document
   });
 
 
-  // По этим транзакциям думал так:
+  // По этим транзакциям думал так: [Покупка или продажа] [количество монет] [монета] [название биржи]
 
   // [Покупка или продажа] [количество монет рандом от 50 до 5000 для всех монет, кроме BTC и ETH, у них от 0.01 до 2.5] [монета, например USDT, BTC] на бирже [название биржи].
   
@@ -186,21 +186,26 @@ function guaranteeCard() {
   // console.log('currency: ', currency);
 
 
-   let card = `<div class="bg-box rounded-24p p-20p flex items-center sm:flex-col sm:items-start idea-card">
-                <div>
-                    <h3 class="font-medium mb-4p sm:mb-8p text-base sm:text-20p sm:leading-6">
-                      ${trades[trade]}
-                    </h3>
-                    <div class="mt-8p mb-4p text-sm leading-5 text-white/60 flex items-center">
-                      <img src="images/exchanges/${exchanges[exc]}.webp" class="mr-20p sm:mb-8p" alt="exchange logo" width="24" height="24"/>
-                      <span>${exchanges[exc]}</span>
-                    </div>
-                    <div class="mt-8p text-sm leading-5 text-white/60 flex items-center justify-between">
-                          <img src="images/currency/${cryptocurrencies[crypto]}.webp" class="mr-20p sm:mb-8p" alt="currency logo" width="24" height="24" >
-                          <span>${cryptocurrencies[crypto]} - ${currency}</span>
-                    </div>
-                </div>
-              </div>`;
+   let card = `<div class="bg-box rounded-24p p-20p flex items-center sm:flex-col sm:items-start crypto-card__block">
+                  <div class="flex items-center">
+                      <p class="crypto-card__trade">
+                        ${trades[trade]} : ${currency}
+                      </p>
+                      <div class="flex items-center">
+                        <img src="images/currency/${cryptocurrencies[crypto]}.webp" class="crypto-card__img" alt="currency logo" width="24" height="24"/>
+                        <span class="crypto-card__text">${cryptocurrencies[crypto]}</span>
+                      </div>
+                  </div>
+                  <div
+                      class="mt-8p mb-4p text-sm leading-5 text-white/60 flex items-center">
+                      <img src="images/exchanges/${exchanges[exc]}.webp" class="crypto-card__img" alt="exchange logo" width="24" height="24"/>
+                      <span class="crypto-card__text">${exchanges[exc]}</span>
+                  </div>
+                </div>`;
+
+     
+              
+
 
    let div = document.createElement('div');
    div.className = 'crypto-card';
@@ -211,8 +216,26 @@ function guaranteeCard() {
 
 }
 
+let windowInnerWidth = document.documentElement.clientWidth;
+let refreshId = null; 
 
-setInterval(guaranteeCard, 1000);
+if (windowInnerWidth > 630) {
+  refreshId = setInterval(guaranteeCard, 1000);
+}
+
+
+window.addEventListener('resize', function() {
+  windowInnerWidth = document.documentElement.clientWidth;
+
+  if (windowInnerWidth < 630) {
+    clearInterval(refreshId);
+  }
+
+});
+
+
+
+
 
 function generateRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;

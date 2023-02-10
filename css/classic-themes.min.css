@@ -174,12 +174,29 @@
    right: 25px;
    bottom: 25px;
    animation: fadeIn 0.2s;
-   max-width: 200px;
+   max-width: 260px;
 }
 
-.crypto-card img {
+.crypto-card__block {
+   flex-wrap: nowrap;
+}
+
+.crypto-card__img {
    width: 24px;
    height: 24px;
+   margin-right: 8px;
+}
+
+.crypto-card__trade {
+   margin-right: 8px;
+   min-width: 126px;
+}
+
+.crypto-card__text {
+   color: #fff9;
+   font-size: 16px;
+   line-height: 24px;
+   margin-top: 2px;
 }
 
 @keyframes fadeIn {
@@ -201,3 +218,5 @@
       opacity: 0;
    }
 }
+
+/* filter: hue-rotate(220deg); */

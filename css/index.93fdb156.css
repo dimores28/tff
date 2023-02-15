@@ -1,52 +1,21 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: ProximaNovaRegular;
-    src: url(../fonts/ProximaNovaRegular.7ce6760d.ttf);
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-SemiBold.ttf') format('woff2'),
+        url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
-    font-weight: 400
+    font-display: swap;
 }
 
 @font-face {
-    font-family: ProximaNovaSemibold;
-    src: url(../fonts/ProximaNovaSemibold.df8c6264.ttf);
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Medium.woff2') format('woff2'),
+        url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
-    font-weight: 400
-}
-
-@font-face {
-    font-family: ProximaNovaLight;
-    src: url(../fonts/ProximaNovaLight.076d851b.otf);
-    font-style: normal;
-    font-weight: 400
-}
-
-@font-face {
-    font-family: ProximaNovaBold;
-    src: url(../fonts/ProximaNovaBold.926a08fb.ttf);
-    font-style: normal;
-    font-weight: 400
-}
-
-@font-face {
-    font-family: ProximaNovaBlack;
-    src: url(../fonts/ProximaNovaBlack.a0606c5f.ttf);
-    font-style: normal;
-    font-weight: 400
-}
-
-@font-face {
-    font-family: InterSemiBold;
-    src: url(../fonts/InterSemiBold.ec60b23f.ttf);
-    font-style: normal;
-    font-weight: 400
-}
-
-@font-face {
-    font-family: ProximaNovaCondBlack;
-    src: url(../fonts/ProximaNovaCondBlack.452c81db.otf);
-    font-style: normal;
-    font-weight: 400
+    font-display: swap;
 }
 
 .img-bg-new {
@@ -114,12 +83,12 @@
 }
 
 .content-home h1 {
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     font-size: 48px
 }
 
 .content-home h2 {
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     font-size: 30px
 }
 
@@ -130,7 +99,7 @@
 .text-r {
     font-size: 12px;
     display: block;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .text-r,
@@ -2588,7 +2557,7 @@ button {
 
 .my-office .wow-week .top .left span {
     font-size: 16px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .my-office .wow-week .top .right {
@@ -3134,7 +3103,7 @@ button {
 .wow-list ul li .lvl p {
     line-height: 44px;
     font-size: 12px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .wow-list ul li .lvl p {
@@ -3641,7 +3610,7 @@ button {
     text-transform: uppercase;
     font-size: 10px;
     font-style: italic;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     white-space: nowrap;
     margin-bottom: 2px
 }
@@ -3649,7 +3618,7 @@ button {
 .promo-week .promo-footer .left span {
     font-size: 14px;
     font-style: italic;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .promo-week .promo-footer .right {
@@ -4194,7 +4163,7 @@ button {
     text-transform: uppercase;
     font-size: 10px;
     font-style: italic;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     white-space: nowrap;
     margin-bottom: 2px
 }
@@ -4202,7 +4171,7 @@ button {
 .promo-year .promo-footer .left span {
     font-size: 14px;
     font-style: italic;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .promo-year .promo-footer .left .img {
@@ -4509,7 +4478,7 @@ button {
     color: #001f36;
     font-size: 31px;
     padding-top: 2px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .promo-usdt .body-promo .right .start {
@@ -4788,7 +4757,7 @@ button {
     text-transform: uppercase;
     font-size: 10px;
     font-style: italic;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     white-space: nowrap;
     margin-bottom: 2px
 }
@@ -4796,7 +4765,7 @@ button {
 .promo-usdt .promo-footer .left span {
     font-size: 14px;
     font-style: italic;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .promo-usdt .promo-footer .right {
@@ -5304,7 +5273,7 @@ button {
     font-size: 14px;
     color: red;
     text-transform: uppercase;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 4px
 }
 
@@ -5312,7 +5281,7 @@ button {
     text-transform: uppercase;
     font-size: 22px;
     color: red;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 2px
 }
 
@@ -5320,7 +5289,7 @@ button {
     text-transform: uppercase;
     color: red;
     font-size: 16px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .promo-p-1 .top .right {
@@ -5346,7 +5315,7 @@ button {
 
 .promo-p-1 .top .right .text p {
     font-size: 12px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase
 }
 
@@ -5404,7 +5373,7 @@ button {
 .promo-p-1 .top .block-timer__item .num {
     font-size: 16px;
     color: red;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .promo-p-1 .top .block-timer__item .txt {
@@ -5475,7 +5444,7 @@ button {
     color: red;
     text-transform: uppercase;
     font-size: 24px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .promo-p-1 .body-promo ul li .img p span {
@@ -5823,7 +5792,7 @@ button {
 .promo-new .top .block-timer__item .num {
     font-size: 16px;
     color: red;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .promo-new .top .block-timer__item .txt {
@@ -5863,7 +5832,7 @@ button {
     font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     color: #00c868
 }
 
@@ -5871,13 +5840,13 @@ button {
     color: #202934;
     font-size: 24px;
     text-transform: uppercase;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .promo-new .body-promo .center .text-r {
     color: red;
     font-size: 16px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     margin-bottom: 10px
 }
@@ -6172,7 +6141,7 @@ button {
     text-transform: uppercase;
     font-size: 10px;
     font-style: italic;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     white-space: nowrap;
     margin-bottom: 2px
 }
@@ -6180,7 +6149,7 @@ button {
 .promo-new .promo-footer .left span {
     font-size: 14px;
     font-style: italic;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .promo-new .promo-footer .right {
@@ -6343,7 +6312,7 @@ button {
 
 .my-office .office-balance .rank .rank-text {
     font-size: 14px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     color: red;
     margin-top: 16px;
@@ -6392,7 +6361,7 @@ button {
     margin-bottom: 12px;
     text-transform: uppercase;
     font-size: 16px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     color: #202934
 }
 
@@ -6865,7 +6834,7 @@ button {
 }
 
 .my-office .body .right .right-text h2 {
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     font-size: 30px;
     margin-bottom: 20px
 }
@@ -8755,7 +8724,7 @@ button {
     color: #00c868;
     margin-right: 20px;
     font-size: 40px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     position: relative;
     display: inline-block
 }
@@ -9182,7 +9151,7 @@ button {
     color: #00c868;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px
 }
 
@@ -9231,7 +9200,7 @@ button {
     color: red;
     text-transform: uppercase;
     font-size: 12px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .team-page .my-team-body li>div {
@@ -9322,7 +9291,7 @@ button {
 
 .team-page .team-top .rank .rank-text {
     font-size: 14px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     color: red;
     margin-top: 16px;
@@ -9371,7 +9340,7 @@ button {
     margin-bottom: 12px;
     text-transform: uppercase;
     font-size: 16px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     color: #202934
 }
 
@@ -9897,7 +9866,7 @@ button {
 .all-partner .line-partner .bon p {
     font-size: 12px;
     color: red;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase
 }
 
@@ -11964,7 +11933,7 @@ button {
     font-size: 24px;
     color: #fff;
     max-width: 270px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 30px
 }
 
@@ -13328,7 +13297,7 @@ button {
 .home-page .video-block .left .description {
     margin-top: 50px;
     font-size: 36px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     max-width: 435px;
     margin-bottom: 30px
 }
@@ -13561,7 +13530,7 @@ button {
 
 .home-page .home-news li .top-news h1 {
     font-size: 30px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .home-page .home-news li .top-news a {
@@ -13876,7 +13845,7 @@ button {
 .contact-home .center p {
     font-size: 12px;
     text-align: center;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     color: #1e2833
 }
@@ -14156,7 +14125,7 @@ button {
 .contact-page .center p {
     font-size: 12px;
     text-align: center;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
 }
 
@@ -14234,7 +14203,7 @@ button {
 
 .privacy .description {
     font-size: 20px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-top: 20px
 }
 
@@ -15175,7 +15144,7 @@ button {
 
 .material .promo .text {
     color: #343341;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 20px
 }
 
@@ -15323,7 +15292,7 @@ button {
     color: #272727;
     font-size: 30px;
     max-width: 640px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-top: 50px;
     margin-bottom: 50px
 }
@@ -15465,7 +15434,7 @@ button {
 
 .media-page h1 {
     font-size: 48px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     padding-bottom: 40px
 }
 
@@ -15859,7 +15828,7 @@ button {
 .news-page .content .center h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .news-page .content .center p {
@@ -16058,14 +16027,14 @@ button {
 .instuction .right h1 {
     font-size: 24px;
     color: #272727;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 20px
 }
 
 .instuction .right h2 {
     font-size: 18px;
     color: #272727;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 10px
 }
 
@@ -16384,14 +16353,14 @@ button {
 
 .team-home .slick-track .team .name .description {
     font-size: 18px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 4px;
     color: #fff
 }
 
 .team-home .slick-track .team .name .text-g {
     font-size: 12px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     color: red;
     letter-spacing: 1px;
@@ -16449,7 +16418,7 @@ button {
 .team-home .team-home-top .btn-team span {
     color: red;
     font-size: 12px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase
 }
 
@@ -16628,7 +16597,7 @@ button {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 18px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
     display: inline-block
 }
@@ -16650,7 +16619,7 @@ button {
     font-size: 12px;
     display: block;
     color: red;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 1px
 }
 
@@ -17666,7 +17635,7 @@ button {
 
 .crypto-text {
     font-size: 24px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .all-partner .line-partner .more-block {
@@ -17833,7 +17802,7 @@ button {
 }
 
 .modal-partner .bon .rank>div p {
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     color: #202934;
     margin-bottom: 2px
@@ -21252,7 +21221,7 @@ button {
 .marketing-page .text {
     font-size: 14px;
     margin-top: 6px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase
 }
 
@@ -21267,13 +21236,13 @@ button {
     font-size: 18px;
     padding-top: 3px;
     margin-bottom: 10px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .marketing-page .bonus {
     font-size: 18px;
     margin-top: 3px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .marketing-page .bonus span {
@@ -21457,26 +21426,26 @@ button {
     color: #fff;
     padding-bottom: 10px;
     font-size: 20px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .conditions li .center .rank {
     color: red;
     font-size: 14px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 30px
 }
 
 .conditions li .center .text {
     color: #fff;
     font-size: 12px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase
 }
 
 .conditions li .center .summ {
     font-size: 48px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     color: red
 }
 
@@ -21596,7 +21565,7 @@ button {
 .conditions li .right .bonus p {
     color: red;
     font-size: 24px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .conditions li .right .bonus span {
@@ -21685,7 +21654,7 @@ button {
     background: hsla(0, 0%, 92.5%, .09);
     color: #fff;
     font-size: 14px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .bonus-page li .rank {
@@ -21769,7 +21738,7 @@ button {
 .bottom-text .text-block.text-block-red {
     max-width: 700px;
     color: red;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     font-style: italic;
     margin-bottom: 0
 }
@@ -21779,7 +21748,7 @@ button {
 }
 
 .bottom-text .text-block-b {
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .bottom-text .content .left {
@@ -22624,7 +22593,7 @@ button {
     text-transform: uppercase;
     color: red;
     display: inline-block;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     line-height: 30px;
     margin-bottom: 30px;
     background: rgba(255, 0, 0, .2);
@@ -22715,7 +22684,7 @@ button {
 
 .home-new .header .left .left-stat .semi.ttu {
     font-size: 20px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     color: red;
     margin-bottom: 4px
 }
@@ -22971,7 +22940,7 @@ button {
 }
 
 .home-new .stats .right .right-text h2 {
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     font-size: 30px;
     margin-bottom: 20px;
     max-width: 200px
@@ -23749,7 +23718,7 @@ button {
     font-size: 12px;
     color: red;
     text-transform: uppercase;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .top100 .body-block li .rank img {
@@ -23852,7 +23821,7 @@ button {
 .top100 .block-text .text-b {
     font-size: 16px;
     color: #202934;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .top100 .block-text img {
@@ -23890,7 +23859,7 @@ button {
 .top100 .block-text li .text-r {
     color: red;
     font-size: 24px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     min-width: 25px;
     text-align: left;
     margin-right: 10px
@@ -23901,7 +23870,7 @@ button {
 }
 
 .top100 .block-text li .text span {
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .top100 .block-text .text-text {
@@ -24337,7 +24306,7 @@ button {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     padding: 5px 5px 5px 0;
     -webkit-transition: .2s;
     transition: .2s
@@ -24374,7 +24343,7 @@ button {
 .academy .not-open p {
     font-size: 18px;
     margin-top: 30px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 14px
 }
 
@@ -25081,7 +25050,7 @@ button {
 .academy-lesson .left-block h1 {
     margin-top: 18px;
     font-size: 24px;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .academy-lesson .left-block .download {
@@ -25544,7 +25513,7 @@ button {
 .deal-page .deals-list .list p {
     font-size: 16px;
     color: #202934;
-    font-family: ProximaNovaBold
+    font-family: 'Poppins', sans-serif
 }
 
 .deal-page .deals-list .list .pair p {
@@ -25918,7 +25887,7 @@ button {
     font-size: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     color: #282828;
     -webkit-transition: .2s;
     transition: .2s
@@ -26037,7 +26006,7 @@ button {
 .event-page .content .center .text {
     color: #272727;
     font-size: 20px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 10px
 }
 
@@ -28647,7 +28616,7 @@ blockquote {
 .page-school__body .not-open p {
     font-size: 18px;
     margin-top: 30px;
-    font-family: ProximaNovaBold;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 14px
 }
 

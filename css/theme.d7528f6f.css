@@ -319,9 +319,9 @@ body {
 }
 
 body {
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     min-height: 100vh;
-    background: #070609;
+    background: #060028;
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
@@ -427,7 +427,8 @@ body {
     gap: .5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: .875rem;
+    font-size: 24px;
+    letter-spacing: 0.015em;
     line-height: 1.25rem;
     font-weight: 400;
     color: #fffc;
@@ -437,8 +438,7 @@ body {
 }
 
 #main-menu>li>a:hover {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity))
+    color: #EB00FF;
 }
 
 #main-menu>li>a span+span {
@@ -455,8 +455,7 @@ body {
 }
 
 #main-menu>li:hover>a {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity))
+    color: #EB00FF;
 }
 
 #main-menu>li:hover>a span+span {
@@ -465,8 +464,7 @@ body {
 }
 
 #main-menu>li.current-menu-item>a {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity))
+    color: #EB00FF;
 }
 
 #main-menu>li>ul {
@@ -663,19 +661,21 @@ body {
     position: absolute;
     inset: -100px 0 0;
     z-index: -2;
-    background-image: url(../images/themes/home-hero.jpg);
+    background-image: url('../images/themes/photo_2023-02-06_14-21-08 1.png');
     background-position: center right;
     background-size: contain;
     background-repeat: no-repeat;
-    overflow: hidden
+    overflow: hidden;
+    box-shadow: rgba(6, 0, 40, 0.25) 0px 54px 55px, rgba(6, 0, 40, 0.12) 0px -12px 30px, rgba(6, 0, 40, 0.12) 0px 4px 6px, rgba(6, 0, 40, 0.17) 0px 12px 13px, rgba(6, 0, 40, 0.09) 0px -3px 5px;
 }
 
 @media (min-width: 640px) {
     .home-hero-bg {
-        background-image: url(../images/themes/home-hero.jpg);
-        background-position: center;
-        background-size: cover;
+        background-image: url('../images/themes/photo_2023-02-06_14-21-08 1.png');
+        background-position: center right;
+        background-size: contain;
         background-repeat: no-repeat;
+        box-shadow: rgba(6, 0, 40, 0.25) 0px 54px 55px, rgba(6, 0, 40, 0.12) 0px -12px 30px, rgba(6, 0, 40, 0.12) 0px 4px 6px, rgba(6, 0, 40, 0.17) 0px 12px 13px, rgba(6, 0, 40, 0.09) 0px -3px 5px;
     }
 }
 
@@ -5979,4 +5979,54 @@ table.payouts-table tbody td {
     .xl\:text-left {
         text-align: left
     }
+}
+
+.btn-blue {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 106.8%;
+    letter-spacing: 0.015em;
+    background: #2F0DFF;
+    border-radius: 16px;
+    padding: 24px 56px;
+}
+
+.btn-blue:hover {
+    opacity: 0.7;
+}
+
+.btn-pinck {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 106.8%;
+    letter-spacing: 0.015em;
+    background: #EB00FF;
+    border-radius: 16px;
+    padding: 24px 56px;
+}
+
+.btn-pinck:hover {
+    opacity: 0.7;
+}
+
+.main-buttons {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 106.8%;
+    padding: 24px 55px;
+    letter-spacing: 0.015em;
+    background: #EB00FF;
+    box-shadow: 0px 0px 39px #82008D;
+    border-radius: 16px;
+}
+
+.main-buttons:hover,
+.main-buttons:active,
+.main-buttons:focus {
+    background: #F691FF;
+    box-shadow: 0px 0px 39px #82008D;
+    border-radius: 16px;
 }

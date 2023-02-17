@@ -19,7 +19,7 @@ var options = {
     }
   ],
   chart: {
-    height: 350,
+    height: 650,
     type: "area",
     toolbar: {
       autoSelected: "pan",
@@ -67,7 +67,25 @@ var options = {
     x: {
       format: "dd/MM/yy HH:mm"
     }
-  }
+  },
+  responsive: [{
+    breakpoint: 1000,
+      options: {
+        chart: {
+          width: "100%",
+          height: 380,
+        }
+      },
+  },
+  {
+    breakpoint: 600,
+    options: {
+      chart: {
+        width: "100%",
+        height: 280,
+      }
+    },
+  },]
 };
 
 var chart = new ApexCharts(

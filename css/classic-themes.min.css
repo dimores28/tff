@@ -16,7 +16,7 @@
 .video {
    display: flex;
    justify-content: center;
-   flex-basis: 250%;
+   flex-basis: 120%;
 }
 
 .video__thumbnail {

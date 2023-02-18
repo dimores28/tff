@@ -427,7 +427,7 @@ body {
     gap: .5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: 0.015em;
     line-height: 1.25rem;
     font-weight: 400;
@@ -668,7 +668,6 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     overflow: hidden;
-    box-shadow: rgba(6, 0, 40, 0.25) 0px 54px 55px, rgba(6, 0, 40, 0.12) 0px -12px 30px, rgba(6, 0, 40, 0.12) 0px 4px 6px, rgba(6, 0, 40, 0.17) 0px 12px 13px, rgba(6, 0, 40, 0.09) 0px -3px 5px;
 }
 
 .home-hero-bg::after {
@@ -688,13 +687,9 @@ body {
     .home-hero-bg {
         max-width: 1920px;
         margin: 0 auto;
-        /* background: url('../images/themes/photo_2023-02-06_14-21-08 1.png');
-        background-position: center right;
-        background-size: contain;
-        background-repeat: no-repeat; */
-        background: url('../images/themes/photo_2023-02-06_14-21-08 1.png') 93% 0% no-repeat;
-        background-blend-mode: color;
-        box-shadow: rgba(6, 0, 40, 0.25) 0px 54px 55px, rgba(6, 0, 40, 0.12) 0px -12px 30px, rgba(6, 0, 40, 0.12) 0px 4px 6px, rgba(6, 0, 40, 0.17) 0px 12px 13px, rgba(6, 0, 40, 0.09) 0px -3px 5px;
+        background: url('../images/themes/bg_footer.png') 95% 134% no-repeat, 
+        url('../images/themes/photo_2023-02-06_14-21-08 1.png') 106% 0% no-repeat;
+        background-size: 100% auto, 60% auto;
     }
 }
 
@@ -6006,8 +6001,8 @@ table.payouts-table tbody td {
     line-height: 106.8%;
     letter-spacing: 0.015em;
     background: #2F0DFF;
-    border-radius: 16px;
-    padding: 24px 56px;
+    border-radius: 14px;
+    padding: 18px 44px;
 }
 
 .btn-blue:hover {
@@ -6021,8 +6016,8 @@ table.payouts-table tbody td {
     line-height: 106.8%;
     letter-spacing: 0.015em;
     background: #EB00FF;
-    border-radius: 16px;
-    padding: 24px 56px;
+    border-radius: 14px;
+    padding: 18px 44px;
 }
 
 .btn-pinck:hover {
@@ -6072,14 +6067,11 @@ table.payouts-table tbody td {
     .btn-registraton,
     .btn-sigin {
         font-size: 16px;
-        padding: 18px 50px;
+        padding: 18px 42px;
     }
 
-    .header-logo {
-        width: 160px;
-        height: auto;
-    }
 }
+
 
 @media (max-width: 1023px) {
     .header-nav {
@@ -6089,6 +6081,13 @@ table.payouts-table tbody td {
 
     .header-btn-group {
         margin-left: auto;
+    }
+}
+
+@media (max-width: 721px) {
+    .header-logo {
+        width: 160px;
+        height: auto;
     }
 }
 
@@ -6116,6 +6115,7 @@ table.payouts-table tbody td {
         display: flex;
         flex-direction: column;
         padding-top: 46px;
+        align-items: flex-end;
     }
 
     .btn-registraton {
@@ -6134,7 +6134,8 @@ table.payouts-table tbody td {
     font-size: 64px;
     line-height: 106.8%;
     letter-spacing: 0.015em;
-    margin-bottom: 145px;
+    padding-bottom: 10px;
+    margin-bottom: 106px;
 }
 
 .offer-subtitle {
@@ -6413,7 +6414,25 @@ table.payouts-table tbody td {
     width: 100%;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1490px) {
+    .video-content {
+        margin-left: -188px;
+        min-width: 700px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .text-content {
+        margin-top: -22px;
+    }
+
+    .video-content {
+        margin-left: -182px;
+        min-width: 682px;
+    }
+}
+
+@media (max-width: 1300px) {
     .video-wrapper {
         flex-wrap: wrap;
     }
@@ -6421,6 +6440,11 @@ table.payouts-table tbody td {
     .video-content {
         margin-top: 30px;
         margin-left: 0;
+        min-width: 850px;
+    }
+
+    .text-content {
+        margin-top: 0px;
     }
 }
 
@@ -6525,11 +6549,16 @@ table.payouts-table tbody td {
     max-width: 1920px;
     margin: 0 auto;
     overflow-x: hidden;
-    padding: 50px 0;
+    /* padding: 50px 0;
 
     background: url('../images/themes/Ellipse84.png') 0% 7% no-repeat, 
     url('../images/themes/Ellipse84.png') 43% 73% no-repeat,
-    url('../images/themes/Ellipse85.png') 101% 4% no-repeat;
+    url('../images/themes/Ellipse85.png') 101% 4% no-repeat; */
+
+    padding: 80px 0px;
+    background: url('../images/themes/Ellipse84.png') 0% 7% no-repeat, 
+    url('../images/themes/Ellipse84.png') 43% 100% no-repeat, 
+    url('../images/themes/Ellipse85.png') 100% 0% no-repeat;
 }
 
 @media (max-width: 740px) {

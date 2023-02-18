@@ -19,7 +19,7 @@ var options = {
     }
   ],
   chart: {
-    height: 650,
+    height: 500,
     type: "area",
     toolbar: {
       autoSelected: "pan",
@@ -230,7 +230,7 @@ function guaranteeCard() {
    div.innerHTML = card;
 
    document.body.append(div);
-   setTimeout(()=> div.remove(), 500);
+   setTimeout(()=> div.remove(), 1000);
 
 }
 
@@ -238,7 +238,7 @@ let windowInnerWidth = document.documentElement.clientWidth;
 let refreshId = null; 
 
 if (windowInnerWidth > 630) {
-  refreshId = setInterval(guaranteeCard, 1000);
+  refreshId = setInterval(guaranteeCard, 2000);
 }
 
 

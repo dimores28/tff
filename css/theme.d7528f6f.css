@@ -7149,7 +7149,7 @@ table.payouts-table tbody td {
 }
 
 .btn-animation {
-    animation: 2s infinite blinck;
+    animation: 2s infinite glowing;
 
 }
 
@@ -7161,4 +7161,10 @@ table.payouts-table tbody td {
     to {
         box-shadow: 0px 0px 39px #82008d;
     }
+}
+
+@keyframes glowing {
+    0% { background-color: #ea00ff5b; box-shadow: 0 0 9px #EB00FF; }
+    50% { background-color: #ea00ffa1; box-shadow: 0 0 20px #EB00FF; }
+    100% { background-color: #EB00FF; box-shadow: 0 0 9px #EB00FF; }
 }

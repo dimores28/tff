@@ -7147,3 +7147,18 @@ table.payouts-table tbody td {
         height: 160px;
     }
 }
+
+.btn-animation {
+    animation: 2s infinite blinck;
+
+}
+
+@keyframes blinck {
+    from {
+        box-shadow: 0px 0px 1px #82008d;
+    }
+
+    to {
+        box-shadow: 0px 0px 39px #82008d;
+    }
+}

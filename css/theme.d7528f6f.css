@@ -6126,6 +6126,12 @@ table.payouts-table tbody td {
     margin-top: 220px;
 }
 
+@media (max-width: 1500px) {
+    .offer-subtitle {
+        margin-top: 50px;
+    }
+}
+
 @media (max-width: 520px) {
     .main-buttons {
         font-size: 24px;

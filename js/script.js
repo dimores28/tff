@@ -262,3 +262,15 @@ function generateRandomInteger(min, max) {
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
+
+let videoPlayer = document.querySelector('#player');
+
+console.log(videoPlayer);
+videoPlayer.addEventListener('play', function() {
+
+  console.log('play');
+
+  let playBtn = document.querySelector('.play .img');
+
+  playBtn.style.display = 'none';
+})

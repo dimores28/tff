@@ -6433,6 +6433,11 @@ table.payouts-table tbody td {
     .text-content {
         margin-top: 0px;
     }
+
+    .play {
+        padding: 24px 24px;
+        z-index: 0;
+    }
 }
 
 @media (max-width: 915px) {
@@ -6459,7 +6464,7 @@ table.payouts-table tbody td {
 
 @media (max-width: 600px) {
     .play {
-        padding: 27px 32px;
+        padding: 14px 16px;
     }
 }
 
@@ -7165,7 +7170,18 @@ table.payouts-table tbody td {
 }
 
 @keyframes glowing {
-    0% { background-color: #ea00ff5b; box-shadow: 0 0 9px #EB00FF; }
-    50% { background-color: #ea00ffa1; box-shadow: 0 0 20px #EB00FF; }
-    100% { background-color: #EB00FF; box-shadow: 0 0 9px #EB00FF; }
+    0% {
+        background-color: #ea00ff5b;
+        box-shadow: 0 0 9px #EB00FF;
+    }
+
+    50% {
+        background-color: #ea00ffa1;
+        box-shadow: 0 0 20px #EB00FF;
+    }
+
+    100% {
+        background-color: #EB00FF;
+        box-shadow: 0 0 9px #EB00FF;
+    }
 }

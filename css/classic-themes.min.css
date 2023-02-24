@@ -191,6 +191,7 @@
    bottom: 25px;
    animation: fadeIn 0.2s;
    max-width: 260px;
+   z-index: 500;
 }
 
 .crypto-card__block {

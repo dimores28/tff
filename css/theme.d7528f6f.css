@@ -6440,6 +6440,19 @@ table.payouts-table tbody td {
     }
 }
 
+.animation-bg {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    background: #060028;
+}
+
+.right-chart .chart .btn-chart-group .btn-chart.selected {
+    color: #fff;
+    background: #EB00FF;
+    border: 1px solid #EB00FF;
+}
+
 @media (max-width: 915px) {
     .text-content {
         padding-top: 70px;

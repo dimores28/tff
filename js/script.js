@@ -9,7 +9,7 @@ btnShow.addEventListener("click", function () {
 });
 
 
-let data = [1.65, 1.73, 1.73, 1.73, 1.73, 1.73, 1.73];
+let data = [0.75, 0.87, 1.06, 1.23, 1.5, 1.65, 1.73];
 
 var options = {
   series: [
@@ -38,13 +38,13 @@ var options = {
   xaxis: {
     type: "datetime",
     categories: [
-      "2018-09-19T00:00:00.000Z",
-      "2018-09-19T01:30:00.000Z",
-      "2018-09-19T02:30:00.000Z",
-      "2018-09-19T03:30:00.000Z",
-      "2018-09-19T04:30:00.000Z",
-      "2018-09-19T05:30:00.000Z",
-      "2018-09-19T06:30:00.000Z"
+      "2023-01-19T00:00:00.000Z",
+      "2023-02-20T01:30:00.000Z",
+      "2023-03-21T02:30:00.000Z",
+      "2023-04-22T03:30:00.000Z",
+      "2023-05-23T04:30:00.000Z",
+      "2023-06-24T05:30:00.000Z",
+      "2023-07-25T06:30:00.000Z"
     ]
   },
   tooltip: {
@@ -265,10 +265,26 @@ function getRandomArbitrary(min, max) {
 
 let videoPlayer = document.querySelector('#player');
 
-console.log(videoPlayer);
 videoPlayer.addEventListener('play', function() {
 
   let playBtn = document.querySelector('.play .img');
 
   playBtn.style.display = 'none';
 })
+
+let filterBtn = document.querySelectorAll('.btn-chart');
+
+for(let i = 0; i < filterBtn.length; i++) {
+
+  filterBtn[i].addEventListener('click', function(e) {
+
+    let btn = document.querySelectorAll('.btn-chart');
+
+    for(let j = 0; j < btn.length; j++) {
+      btn[j].classList.remove('selected');
+    }
+
+     e.target.parentElement.classList.add('selected');
+  });
+
+}

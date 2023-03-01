@@ -574,7 +574,7 @@ body {
     color: rgb(255 255 255 / var(--tw-text-opacity))
 }
 
-.bg-home {
+/* .bg-home {
     background-image: url('../images/themes/home.webp');
     background-position-y: 500px;
     background-repeat: no-repeat;
@@ -582,14 +582,14 @@ body {
     position: absolute;
     inset: 0;
     z-index: -10;
-}
+} */
 
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
     .bg-home {
         background-image: url('../images/themes/home.webp');
         background-position: unset
     }
-}
+} */
 
 .bg-affiliate {
     background-image: url(/wp-content/themes/tff/img/mbg/affiliate.svg);
@@ -616,11 +616,7 @@ body {
     z-index: -1
 }
 
-@media (min-width: 640px) {
-    .bg-page {
-        background-image: url(/wp-content/themes/tff/img/bg/page.png)
-    }
-}
+
 
 .home-hero-bg {
     min-height: 100%;
@@ -629,12 +625,14 @@ body {
     z-index: -2;
     max-width: 1920px;
     margin: 0 auto;
-    background-image: url('../images/themes/photo_2023-02-06_14-21-08 1.png');
-    background-position: center right;
-    background-size: contain;
-    background-repeat: no-repeat;
     overflow: hidden;
+    /* background-image: url('../images/video/home_bottom.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom; */
 }
+
+
 
 .home-hero-bg::after {
     content: '';
@@ -643,19 +641,41 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(90deg, #070129 60.68%, rgba(9, 1, 43, 0) 100%);
-    opacity: .75;
+    background: rgba(6, 0, 40, 0.71);
     width: 100%;
     height: 100%;
+    position: absolute;
 }
+
+.bg-video {
+    width: 100%;
+    position: relative;
+}
+
+.video-wrapper {
+    position: relative;
+}
+
+.video-wrapper::before {
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('../images/video/home_bottom.png') bottom no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
 
 @media (min-width: 640px) {
     .home-hero-bg {
         max-width: 1920px;
         margin: 0 auto;
-        background: url('../images/themes/bg_footer.png') 95% 134% no-repeat,
-            url('../images/themes/photo_2023-02-06_14-21-08 1.png') 106% 0% no-repeat;
-        background-size: 100% auto, 60% auto;
     }
 }
 
@@ -6038,6 +6058,14 @@ table.payouts-table tbody td {
 
 }
 
+@media (max-width: 1140px) {
+
+    .btn-registraton, .btn-sigin {
+        font-size: 16px;
+        padding: 14px 24px;
+    }    
+}
+
 @media (max-width: 1044px) {
     .btn-sigin {
         margin-left: 15px;
@@ -6143,42 +6171,23 @@ table.payouts-table tbody td {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 720px) {
     .home-hero-bg {
         display: none;
     }
 }
 
-.dies-wrap {
-    position: relative
+.dies {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 35px 19px;
 }
-
 
 .dies__img {
-    position: absolute;
+    margin-right: 20px;
 }
 
-.dies__img_face {
-    top: -10%;
-    right: 20%;
-}
-
-.dies__img_bag {
-    top: -32%;
-    right: 4%;
-    z-index: -1;
-}
-
-.dies__img_rocket {
-    top: -18%;
-    right: 5%;
-}
-
-.dies__img_banknotes {
-    top: -32%;
-    right: 8%;
-    z-index: -1;
-}
 
 .dies__title {
     font-family: 'Poppins';
@@ -6188,7 +6197,6 @@ table.payouts-table tbody td {
     line-height: 106.8%;
     letter-spacing: 0.015em;
     color: #FFFFFF;
-    min-height: 78px;
 }
 
 .dies__text {
@@ -6202,13 +6210,54 @@ table.payouts-table tbody td {
     min-height: 50px;
 }
 
-@media (max-width: 760px) {
-    .dies__img {
-        display: none;
+@media (max-width: 1536px) {
+    .dies__title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .dies {
+        flex-direction: column;
     }
 
-    .offer-subtitle {
-        margin-top: 32px;
+    .dies__img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .dies__title {
+        margin-top: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .dies {
+        flex-direction: row;
+    }
+
+    .dies__img {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .dies__title {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 470px) {
+    .dies {
+        flex-direction: column;
+    }
+
+    .dies__img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .dies__title {
+        margin-top: auto;
     }
 }
 
@@ -6276,16 +6325,26 @@ table.payouts-table tbody td {
 }
 
 .home-new .stats .right .right-text .percent {
-    font-size: 41px;
-    text-transform: uppercase;
-    color: #00c868;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 109.3%;
+    letter-spacing: 0.015em;
+    color: #2F0DFF;
+    margin-top: 4px;
 }
 
 .home-new .stats .right .right-text .stat-text {
-    font-size: 48px;
-    text-transform: uppercase;
-    color: red;
-    margin-bottom: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 109.3%;
+    letter-spacing: 0.015em;
+    color: #EB00FF;
+    margin-top: 4px;
+    margin-bottom: 30px;
 }
 
 @media (max-width: 390px) {
@@ -6301,10 +6360,6 @@ table.payouts-table tbody td {
         transform: scale(95%);
     }
 
-    .home-new .stats .right .right-text .percent {
-        font-size: 32px;
-    }
-
     .home-new .stats .right .right-text .stat-text {
         font-size: 32px;
     }
@@ -6317,8 +6372,6 @@ table.payouts-table tbody td {
 .stats {
     max-width: 1920px;
     margin: 0 auto;
-    background: url('../images/themes/Ellipse84.png') 101% 4% no-repeat,
-        url('../images/themes/Ellipse85.png') -1% 100% no-repeat;
 }
 
 .video-title-wrap {

@@ -20,7 +20,7 @@ var options = {
   ],
   chart: {
     height: 500,
-    type: "area",
+    type: "line",
     toolbar: {
       autoSelected: "pan",
       show: false
@@ -35,6 +35,13 @@ var options = {
   stroke: {
     curve: "smooth"
   },
+  grid: {
+    xaxis: {
+      lines: {
+        show: true
+      }
+    }
+  },
   xaxis: {
     type: "datetime",
     categories: [
@@ -47,6 +54,23 @@ var options = {
       "2023-07-25T06:30:00.000Z"
     ]
   },
+  yaxis: {
+    opposite: true,
+    labels: {
+      style: {
+        fontSize: '22px',
+        fontFamily: 'Poppins, sans-serif',
+        fontWeight: 500,
+      }
+    },
+    title: {
+      style: {
+        fontSize: '22px',
+        fontFamily: 'Poppins, sans-serif',
+        fontWeight: 500,
+      }
+    }
+  },
   tooltip: {
     enabled: true,
     shared: true,
@@ -57,12 +81,9 @@ var options = {
     fillSeriesColor: false,
     theme: true,
     style: {
-      fontSize: "14px"
-    },
-    style: {
-      fontSize: "12px",
+      fontSize: "22px",
       color: "#00c868",
-      background: "#333"
+      background:" #2F0DFF",
     },
     x: {
       format: "dd/MM/yy HH:mm"

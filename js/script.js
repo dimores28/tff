@@ -56,12 +56,19 @@ var options = {
   },
   yaxis: {
     opposite: true,
+    floating: false,
     labels: {
       style: {
         fontSize: '22px',
         fontFamily: 'Poppins, sans-serif',
         fontWeight: 500,
-      }
+      },
+      offsetX: -50,
+      minWidth: 100,
+      maxWidth: 160,
+      formatter: function(val) {
+        return "$" + val.toFixed(2);
+      },
     },
     title: {
       style: {
@@ -293,19 +300,17 @@ videoPlayer.addEventListener('play', function() {
   playBtn.style.display = 'none';
 })
 
-let filterBtn = document.querySelectorAll('.btn-chart');
-
+let filterBtn = document.querySelectorAll('.tende-btn');
 for(let i = 0; i < filterBtn.length; i++) {
 
   filterBtn[i].addEventListener('click', function(e) {
 
-    let btn = document.querySelectorAll('.btn-chart');
+    let btn = document.querySelectorAll('.tende-btn');
 
     for(let j = 0; j < btn.length; j++) {
       btn[j].classList.remove('selected');
     }
-
-     e.target.parentElement.classList.add('selected');
+     e.target.classList.add('selected');
   });
 
 }

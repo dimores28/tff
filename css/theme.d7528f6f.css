@@ -7541,3 +7541,34 @@ table.payouts-table tbody td {
         width: 100%;
     }
 }
+
+.form-text {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: -30px;
+    text-align: center;
+}
+
+.reset-pass {
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+
+.reset-pass .link-btn {
+    margin-right: 30px;
+}
+
+@media (max-width: 640px) {
+    .reset-pass .link-btn {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .reset-pass .submit-btn {
+        width: 100%;
+    }
+}

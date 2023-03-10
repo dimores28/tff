@@ -7291,3 +7291,226 @@ table.payouts-table tbody td {
         margin-bottom: -150px;
     }
 }
+
+.form-wrapper {
+    padding: 0 20px;
+}
+
+.form-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 105px;
+    margin-bottom: 50px;
+}
+
+.form-body {
+    padding: 48px 64px;
+    background: #0A0141;
+    border-radius: 14px;
+    max-width: 815px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.form-label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.form-control {
+    color: #FFFFFF;
+    background: #060026;
+    border-radius: 10px;
+    padding: 10px 26px;
+}
+
+.controls {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.submit-btn,
+.link-btn {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 106.8%;
+    color: #FFFFFF;
+    letter-spacing: 0.015em;
+
+    border-radius: 12px;
+    padding: 14px 38px;
+    transition: all 0.35s ease-in;
+}
+
+.link-btn {
+    border: 1px solid #FFFFFF;
+}
+
+.link-btn:focus,
+.link-btn:active,
+.link-btn:hover {
+    background: #EB00FF;
+    border: 1px solid transparent;
+}
+
+.submit-btn {
+    background: #EB00FF;
+    border: 1px solid transparent;
+}
+
+.submit-btn:hover,
+.submit-btn:active,
+.submit-btn:focus {
+    background: #ea00ff79;
+    border: 1px solid #FFFFFF;
+}
+
+.form-footer {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.form-footer__linck {
+    color: #2F0DFF;
+    transition: all 0.35s ease-in;
+}
+
+.form-footer__linck:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.beautiful-checkbox {
+    position: relative;
+}
+
+
+.beautiful-checkbox input[type='checkbox']:checked+label::after {
+    opacity: 1;
+}
+
+.beautiful-checkbox input[type='checkbox']:disabled+label {
+    color: gray;
+    opacity: 0.6;
+}
+
+.beautiful-checkbox__control {
+    display: block;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.beautiful-checkbox__label {
+    max-width: 194px;
+    font-size: 15px;
+    line-height: 22px;
+    padding-left: 40px;
+    color: #fff;
+    transition: all 0.25s ease-in;
+    display: block;
+}
+
+.beautiful-checkbox__label::after,
+.beautiful-checkbox__label::before {
+    position: absolute;
+    content: '';
+    display: block;
+    cursor: pointer;
+}
+
+.beautiful-checkbox__label::before {
+    width: 20px;
+    height: 20px;
+    background: #060026;
+    border-radius: 4px;
+    left: 0;
+    top: 0;
+}
+
+.beautiful-checkbox__label::after {
+    width: 16px;
+    height: 17px;
+    left: 4px;
+    top: -2px;
+    background: url('../images/form/check.svg') center center no-repeat;
+    background-size: contain;
+    opacity: 0;
+    transition: all 0.25s ease-in;
+}
+
+
+@media (max-width: 872px) {
+    .form-body {
+        padding: 36px 52px;
+    }
+}
+
+@media (max-width: 720px) {
+    .controls {
+        flex-wrap: wrap;
+    }
+
+    .beautiful-checkbox__label {
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-body {
+        padding: 36px 34px;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .submit-btn,
+    .link-btn {
+        font-size: 18px;
+        border-radius: 10px;
+        padding: 10px 28px;
+    }
+}
+
+@media (max-width: 410px) {
+
+    .submit-btn,
+    .link-btn {
+        width: 100%;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .form-body {
+        padding: 36px 24px;
+    }
+}
+
+.form-bg {
+    background: url('../images/themes/blue_spot.png') 18 0% 0% no-repeat, url('../images/themes/pinck_spot.png') -90% 100% no-repeat;
+    background-size: contain, contain;
+}

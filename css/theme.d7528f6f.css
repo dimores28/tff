@@ -7514,3 +7514,30 @@ table.payouts-table tbody td {
     background: url('../images/themes/blue_spot.png') 18 0% 0% no-repeat, url('../images/themes/pinck_spot.png') -90% 100% no-repeat;
     background-size: contain, contain;
 }
+
+.chenge-pass {
+    text-align: right;
+    margin-bottom: 50px;
+}
+
+.remember {
+    margin-right: 100px;
+}
+
+@media (max-width: 767px) {
+    .remember {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 720px) {
+    .remember {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 690px) {
+    .remember {
+        width: 100%;
+    }
+}

@@ -300,6 +300,21 @@ videoPlayer.addEventListener('play', function() {
   playBtn.style.display = 'none';
 })
 
+
+
+// document.querySelector('.play').addEventListener('click', function(){
+//   console.log('click');
+//   let player = document.querySelector('#player');
+
+//   if( player.paused ) {
+//       player.play();
+//   }else {
+//       player.pause();
+//   }
+  
+// });
+
+
 let filterBtn = document.querySelectorAll('.tende-btn');
 for(let i = 0; i < filterBtn.length; i++) {
 

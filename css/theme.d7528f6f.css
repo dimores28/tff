@@ -7083,6 +7083,7 @@ table.payouts-table tbody td {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .employee__bio {
@@ -7572,3 +7573,39 @@ table.payouts-table tbody td {
         width: 100%;
     }
 }
+
+.video-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: none;
+}
+
+.video-popup__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #060028da;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+.video-popup__body {
+    max-width: 960px;
+}
+
+.video-popup__video {
+    width: 100%;
+    position: relative;
+    z-index: 1002;
+}
+
+.blockScroll {margin: 0; height: 100%; overflow: hidden}

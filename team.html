@@ -740,7 +740,7 @@
 
                      <div class="employee__photo_xl">
                         <img
-                           src="images/team/1.jpg"
+                           src="images/team/IMG_3159.jpeg"
                            alt="employee photo"
                            width="211"
                            height="211" />
@@ -755,7 +755,7 @@
 
                            <div class="employee__photo">
                               <img
-                                 src="images/team/1.jpg"
+                                 src="images/team/IMG_3159.jpeg"
                                  alt="employee photo"
                                  width="211"
                                  height="211" />
@@ -781,7 +781,7 @@
 
                      <div class="employee__photo_xl">
                         <img
-                           src="images/team/2.jpg"
+                           src="images/team/IMG_3179.jpeg"
                            alt="employee photo"
                            width="211"
                            height="211" />
@@ -796,7 +796,7 @@
 
                            <div class="employee__photo">
                               <img
-                                 src="images/team/2.jpg"
+                                 src="images/team/IMG_3179.jpeg"
                                  alt="employee photo"
                                  width="211"
                                  height="211" />
@@ -822,7 +822,7 @@
 
                      <div class="employee__photo_xl">
                         <img
-                           src="images/team/3.jpg"
+                           src="images/team/IMG_3215.jpeg"
                            alt="employee photo"
                            width="211"
                            height="211" />
@@ -837,7 +837,7 @@
 
                            <div class="employee__photo">
                               <img
-                                 src="images/team/3.jpg"
+                                 src="images/team/IMG_3215.jpeg"
                                  alt="employee photo"
                                  width="211"
                                  height="211" />
@@ -854,6 +854,22 @@
                </div>
             </div>
          </main>
+
+         <div class="video-popup">
+            <div class="video-popup__overlay">
+               <div class="video-popup__body">
+                  <video
+                        poster="images/video/poster.jpg"
+                        controls="controls"
+                        autoplay="autoplay"
+                        class="video-popup__video">
+                        <source
+                           src="images/video/video.mp4"
+                           type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                   </video> 
+               </div>
+            </div>
+         </div>
 
          <!-- screan 8 V-->
          <footer
@@ -982,7 +998,38 @@
             src="js/main.1ccd4732.js"
             id="tff-main-js"></script>
          <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-         <script src="js/script.js"></script>
+         <!-- <script src="js/script.js"></script> -->
+         <script>
+            // document.querySelector('.employee__sticker img').addEventListener('click', function(){
+            //    console.log('click');
+            //    document.querySelector('html').classList.toggle('blockScroll');
+            //    document.querySelector('body').classList.toggle('blockScroll');
+            // });
+
+            let playButtons = document.querySelectorAll('.employee__sticker img');
+
+            for(let i = 0; i < playButtons.length; i++) {
+
+               playButtons[i].addEventListener('click', function(event){
+                  event.stopPropagation();
+
+                  document.querySelector('html').classList.toggle('blockScroll');
+                  document.querySelector('body').classList.toggle('blockScroll');
+
+                  document.querySelector('.video-popup').style.display = "block";
+               });
+            }
+
+            document.querySelector('.video-popup__overlay').addEventListener('click', function(){
+               document.querySelector('.video-popup').style.display = "none";
+               document.querySelector('html').classList.toggle('blockScroll');
+               document.querySelector('body').classList.toggle('blockScroll');
+            });
+
+            document.querySelector('.video-popup__video').addEventListener('click', function(event){
+               event.stopPropagation();
+            });
+         </script>
       </div>
    </body>
 </html>

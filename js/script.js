@@ -303,7 +303,6 @@ videoPlayer.addEventListener('play', function() {
 
 
 document.querySelector('.video-content').addEventListener('click', function(){
-  console.log('click');
   let player = document.querySelector('#player');
 
   if( player.paused ) {
@@ -329,5 +328,6 @@ for(let i = 0; i < filterBtn.length; i++) {
   });
 
 }
+
 
 

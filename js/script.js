@@ -8,136 +8,167 @@ btnShow.addEventListener("click", function () {
   document.querySelector("#mobileMenu").style.display = "block";
 });
 
+function getRandomRealInclusive(min, max) {
+  let random = Math.random() * (max - min + 1) + min;
+  return random.toFixed(1);
+}
 
-let data = [0.75, 0.87, 1.06, 1.23, 1.5, 1.65, 1.73];
+function getChartsData(range) {
+  let data = [];
+  let categories = [];
 
-var options = {
-  series: [
-    {
-      name: "profit",
-      data: data
-    }
-  ],
-  chart: {
-    height: 500,
-    type: "line",
-    toolbar: {
-      autoSelected: "pan",
-      show: false
+  for(let i = 0, j = 0; i < range; i++, j += 7) {
+    let num  = parseFloat(getRandomRealInclusive(2, 5));
+    num = num > 5 ? 5 : num
+    data.push(num);
+
+    let now = new Date() ;
+    categories.push(now.setDate(now.getDate() - j));
+  }
+
+  return { data: data, categories: categories } 
+}
+
+window.onload = function () {
+
+  let { data, categories } = getChartsData(7)
+
+  
+  var options = {
+    series: [
+      {
+        name: "profit",
+        data: data
+      }
+    ],
+    chart: {
+      height: 500,
+      type: "line",
+      toolbar: {
+        autoSelected: "pan",
+        show: false
+      },
+      zoom: {
+        enabled: false
+      }
     },
-    zoom: {
+    dataLabels: {
       enabled: false
-    }
-  },
-  dataLabels: {
-    enabled: false
-  },
-  stroke: {
-    curve: "smooth"
-  },
-  grid: {
+    },
+    stroke: {
+      curve: "smooth"
+    },
+    grid: {
+      xaxis: {
+        lines: {
+          show: true
+        }
+      }
+    },
     xaxis: {
-      lines: {
-        show: true
+      type: "datetime",
+      categories:  categories,
+      tickPlacement: 'on',
+      tickAmount: 10,
+      labels: {
+        formatter: function(value, timestamp, opts) {
+          return opts.dateFormatter(new Date(timestamp), 'dd MMM')
+        }
       }
-    }
-  },
-  xaxis: {
-    type: "datetime",
-    categories: [
-      "2023-01-19T00:00:00.000Z",
-      "2023-02-20T01:30:00.000Z",
-      "2023-03-21T02:30:00.000Z",
-      "2023-04-22T03:30:00.000Z",
-      "2023-05-23T04:30:00.000Z",
-      "2023-06-24T05:30:00.000Z",
-      "2023-07-25T06:30:00.000Z"
-    ]
-  },
-  yaxis: {
-    opposite: true,
-    floating: false,
-    labels: {
-      style: {
-        fontSize: '22px',
-        fontFamily: 'Poppins, sans-serif',
-        fontWeight: 500,
-      },
-      offsetX: -50,
-      minWidth: 100,
-      maxWidth: 160,
-      formatter: function(val) {
-        return "$" + val.toFixed(2);
-      },
     },
-    title: {
-      style: {
-        fontSize: '22px',
-        fontFamily: 'Poppins, sans-serif',
-        fontWeight: 500,
+    yaxis: {
+      opposite: true,
+      floating: false,
+      labels: {
+        style: {
+          fontSize: '22px',
+          fontFamily: 'Poppins, sans-serif',
+          fontWeight: 500,
+        },
+        offsetX: -50,
+        minWidth: 100,
+        maxWidth: 160,
+        formatter: function(val) {
+          return "$" + val.toFixed(2);
+        },
+      },
+      title: {
+        style: {
+          fontSize: '22px',
+          fontFamily: 'Poppins, sans-serif',
+          fontWeight: 500,
+        }
       }
-    }
-  },
-  tooltip: {
-    enabled: true,
-    shared: true,
-    followCursor: false,
-    intersect: false,
-    inverseOrder: false,
-    custom: undefined,
-    fillSeriesColor: false,
-    theme: true,
-    style: {
-      fontSize: "22px",
-      color: "#00c868",
-      background:" #2F0DFF",
     },
-    x: {
-      format: "dd/MM/yy HH:mm"
-    }
-  },
-  responsive: [{
-    breakpoint: 1000,
+    tooltip: {
+      enabled: true,
+      shared: true,
+      followCursor: false,
+      intersect: false,
+      inverseOrder: false,
+      custom: undefined,
+      fillSeriesColor: false,
+      theme: true,
+      style: {
+        fontSize: "22px",
+        color: "#00c868",
+        background:" #2F0DFF",
+      },
+      x: {
+        format: "dd/MM/yy HH:mm"
+      }
+    },
+    responsive: [{
+      breakpoint: 1000,
+        options: {
+          chart: {
+            width: "100%",
+            height: 380,
+          }
+        },
+    },
+    {
+      breakpoint: 600,
       options: {
         chart: {
           width: "100%",
-          height: 380,
+          height: 280,
         }
       },
-  },
-  {
-    breakpoint: 600,
-    options: {
-      chart: {
-        width: "100%",
-        height: 280,
-      }
-    },
-  },]
-};
+    },]
+  };
 
-var chart = new ApexCharts(
-  document.querySelector("#apexchartsziwzcw17"),
-  options
-);
-chart.render();
 
-document
+  var chart = new ApexCharts(
+    document.querySelector("#apexchartsziwzcw17"),
+    options
+  );
+  chart.render();
+  
+
+  document
   .querySelector("#setDay")
   .addEventListener("click", function () {
-    data = [1.65, 1.73, 1.73, 1.73, 1.73, 1.73, 1.73];
+
+    let { data, categories } = getChartsData(4)
 
     chart.updateSeries([
       {
         data: data
       }
     ]);
+
+    chart.updateOptions({
+      xaxis: {
+        categories: categories,
+      }
+    });
   });
 
-document
+  document
   .querySelector("#setWeek")
   .addEventListener("click", function () {
-    data = [1.36, 1.42, 1.5, 1.57, 1.65, 1.73, 1.73];
+    let { data, categories } = getChartsData(7)
 
     chart.updateSeries([
       {
@@ -147,23 +178,15 @@ document
 
     chart.updateOptions({
       xaxis: {
-        categories: [
-          "2023-09-19T00:00:00.000Z",
-          "2023-09-20T01:30:00.000Z",
-          "2023-09-21T02:30:00.000Z",
-          "2023-09-22T03:30:00.000Z",
-          "2023-09-23T04:30:00.000Z",
-          "2023-09-24T05:30:00.000Z",
-          "2023-09-25T06:30:00.000Z"
-        ]
+        categories: categories
       }
     });
   });
 
-document
+  document
   .querySelector("#setMount")
   .addEventListener("click", function () {
-    data = [0.75, 0.87, 1.06, 1.23, 1.5, 1.65, 1.73];
+    let { data, categories } = getChartsData(12)
 
     chart.updateSeries([
       {
@@ -173,18 +196,99 @@ document
 
     chart.updateOptions({
       xaxis: {
-        categories: [
-          "2023-01-19T00:00:00.000Z",
-          "2023-02-20T01:30:00.000Z",
-          "2023-03-21T02:30:00.000Z",
-          "2023-04-22T03:30:00.000Z",
-          "2023-05-23T04:30:00.000Z",
-          "2023-06-24T05:30:00.000Z",
-          "2023-07-25T06:30:00.000Z"
-        ]
+        categories: categories,
+        tickAmount: 12,
       }
     });
   });
+
+  document
+  .querySelector("#setMount6")
+  .addEventListener("click", function () {
+    let { data, categories } = getChartsData(26)
+
+    chart.updateSeries([
+      {
+        data: data
+      }
+    ]);
+
+    chart.updateOptions({
+      xaxis: {
+        categories: categories,
+        tickAmount: 12,
+      }
+    });
+  });
+
+  document
+  .querySelector("#setYear")
+  .addEventListener("click", function () {
+    let { data, categories } = getChartsData(52)
+
+    chart.updateSeries([
+      {
+        data: data
+      }
+    ]);
+
+    chart.updateOptions({
+      xaxis: {
+        categories: categories,
+        tickAmount: 12,
+      }
+    });
+
+    console.log(categories)
+  });
+
+  document
+  .querySelector("#setYear5")
+  .addEventListener("click", function () {
+    let { data, categories } = getChartsData(260)
+
+    chart.updateSeries([
+      {
+        data: data
+      }
+    ]);
+
+    chart.updateOptions({
+      xaxis: {
+        categories: categories,
+        tickAmount: 12,
+      }
+    });
+  });
+
+  document
+  .querySelector("#setMax")
+  .addEventListener("click", function () {
+    let { data, categories } = getChartsData(300)
+
+    chart.updateSeries([
+      {
+        data: data
+      }
+    ]);
+
+    chart.updateOptions({
+      xaxis: {
+        categories: categories,
+        tickAmount: 12,
+      }
+    });
+  });
+  //===========================================================end 
+}
+
+
+
+
+
+
+
+
 
 
   // По этим транзакциям думал так: [Покупка или продажа] [количество монет] [монета] [название биржи]

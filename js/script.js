@@ -31,7 +31,7 @@ function getChartsData(range) {
 
 window.onload = function () {
 
-  let { data, categories } = getChartsData(7)
+  let { data, categories } = getChartsData(300)
 
   
   var options = {
@@ -89,7 +89,7 @@ window.onload = function () {
         minWidth: 100,
         maxWidth: 160,
         formatter: function(val) {
-          return "$" + val.toFixed(2);
+          return "%" + val.toFixed(2);
         },
       },
       title: {
@@ -115,7 +115,7 @@ window.onload = function () {
         background:" #2F0DFF",
       },
       x: {
-        format: "dd/MM/yy HH:mm"
+        format: 'dd MMM yyyy'
       }
     },
     responsive: [{
@@ -144,118 +144,97 @@ window.onload = function () {
     options
   );
   chart.render();
+
+let now = new Date() ;
+  
+chart.zoomX(
+      now.setDate(now.getDate() - 7*7 ),
+      now
+)
   
 
   document
   .querySelector("#setDay")
   .addEventListener("click", function () {
 
-    let { data, categories } = getChartsData(4)
+    let now = new Date() ;
 
-    chart.updateSeries([
-      {
-        data: data
-      }
-    ]);
+    chart.zoomX(
+      now.setDate(now.getDate() - 4*7),
+      now
+    )
 
-    chart.updateOptions({
-      xaxis: {
-        categories: categories,
-      }
-    });
+    // let { data, categories } = getChartsData(4)
+
+    // chart.updateSeries([
+    //   {
+    //     data: data
+    //   }
+    // ]);
+
+    // chart.updateOptions({
+    //   xaxis: {
+    //     categories: categories,
+    //   }
+    // });
   });
 
   document
   .querySelector("#setWeek")
   .addEventListener("click", function () {
-    let { data, categories } = getChartsData(7)
+    let now = new Date() ;
 
-    chart.updateSeries([
-      {
-        data: data
-      }
-    ]);
-
-    chart.updateOptions({
-      xaxis: {
-        categories: categories
-      }
-    });
+    chart.zoomX(
+      now.setDate(now.getDate() - 7*7),
+      now
+    )
   });
 
   document
   .querySelector("#setMount")
   .addEventListener("click", function () {
-    let { data, categories } = getChartsData(12)
+    let now = new Date() ;
 
-    chart.updateSeries([
-      {
-        data: data
-      }
-    ]);
-
-    chart.updateOptions({
-      xaxis: {
-        categories: categories,
-        tickAmount: 12,
-      }
-    });
+    chart.zoomX(
+      now.setDate(now.getDate() - 12*7),
+      now
+    )
   });
 
   document
   .querySelector("#setMount6")
   .addEventListener("click", function () {
-    let { data, categories } = getChartsData(26)
+    let now = new Date() ;
 
-    chart.updateSeries([
-      {
-        data: data
-      }
-    ]);
-
-    chart.updateOptions({
-      xaxis: {
-        categories: categories,
-        tickAmount: 12,
-      }
-    });
+    chart.zoomX(
+      now.setDate(now.getDate() - 26*7),
+      now
+    )
   });
 
   document
   .querySelector("#setYear")
   .addEventListener("click", function () {
-    let { data, categories } = getChartsData(52)
+      let now = new Date() ;
 
-    chart.updateSeries([
-      {
-        data: data
-      }
-    ]);
-
-    chart.updateOptions({
-      xaxis: {
-        categories: categories,
-        tickAmount: 12,
-      }
-    });
-
-    console.log(categories)
+      chart.zoomX(
+        now.setDate(now.getDate() - 52*7),
+        now
+      )
   });
 
   document
   .querySelector("#setYear5")
   .addEventListener("click", function () {
-    let { data, categories } = getChartsData(260)
+    let now = new Date() ;
 
-    chart.updateSeries([
-      {
-        data: data
-      }
-    ]);
+    chart.zoomX(
+      now.setDate(now.getDate() - 260*7),
+      now
+    )
 
     chart.updateOptions({
       xaxis: {
-        categories: categories,
         tickAmount: 12,
       }
     });
@@ -264,28 +243,13 @@ window.onload = function () {
   document
   .querySelector("#setMax")
   .addEventListener("click", function () {
-    let { data, categories } = getChartsData(300)
-
-    chart.updateSeries([
-      {
-        data: data
-      }
-    ]);
-
-    chart.updateOptions({
-      xaxis: {
-        categories: categories,
-        tickAmount: 12,
-      }
-    });
+    chart.zoomX(
+      now.setDate(now.getDate() - 300*7),
+      now
+    )
   });
   //===========================================================end 
 }
-
-
-
-
-
 
 
 
@@ -406,16 +370,16 @@ videoPlayer.addEventListener('play', function() {
 
 
 
-document.querySelector('.video-content').addEventListener('click', function(){
-  let player = document.querySelector('#player');
+// document.querySelector('.video-content').addEventListener('click', function(){
+//   let player = document.querySelector('#player');
 
-  if( player.paused ) {
-      player.play();
-  }else {
-      player.pause();
-  }
+//   if( player.paused ) {
+//       player.play();
+//   }else {
+//       player.pause();
+//   }
   
-});
+// });
 
 
 let filterBtn = document.querySelectorAll('.tende-btn');

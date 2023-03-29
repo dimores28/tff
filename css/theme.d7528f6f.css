@@ -7077,6 +7077,24 @@ table.payouts-table tbody td {
     border-bottom-left-radius: 38px;
 }
 
+.employee__sticker_left {
+    background-image: url(../images/team/Rectangle63.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.employee__sticker_center {
+    background-image: url(../images/team/Rectangle65.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.employee__sticker_right {
+    background-image: url(../images/team/Rectangle64.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .employee__sticker img {
     position: absolute;
     top: 50%;
@@ -7090,6 +7108,10 @@ table.payouts-table tbody td {
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 37px;
+}
+
+.employee__desc {
+    min-height: 96px;
 }
 
 .employee__name {
@@ -7198,11 +7220,24 @@ table.payouts-table tbody td {
     }
 
     .employee__sticker {
-        display: none;
+        width: 144px;
+        height: 125px;
+        left: unset;
+        top: 265px;
+        right: 45px;
+        border-top-right-radius: 16px;
+        border-bottom-left-radius: 16px;
     }
 
     .employee__name {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    .employee__sticker {
+        top: 54px;
+        right: 26px;
     }
 }
 
@@ -7211,6 +7246,13 @@ table.payouts-table tbody td {
         width: 160px;
         height: 160px;
     }
+
+    /* .employee__sticker {
+        width: 144.59px;
+        height: 125.59px;
+        left: 214.52px;
+        top: 283.72px;
+    } */
 }
 
 .btn-animation {

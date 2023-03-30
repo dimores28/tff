@@ -7376,6 +7376,11 @@ table.payouts-table tbody td {
     background: #060026;
     border-radius: 10px;
     padding: 10px 26px;
+    margin-bottom: 12px;
+}
+
+.form-body .invalid-feedback {
+    color: #c90909;
 }
 
 .controls {

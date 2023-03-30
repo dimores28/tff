@@ -782,79 +782,144 @@
             </div>
          </header>
 
-         <main class="site-main form-bg" style="min-height: 100vh">
+         <main class="site-main form-bg">
             <section class="form-wrapper">
                <h2 class="text-white-gradient section-title form-header">
-                  Reset password
+                  Sign in
                </h2>
 
-               <p class="form-text">
-                  If you forgot your password, well, then we'll email you
-                  instructions to reset your password.
-               </p>
-
                <div class="form-body">
-                  <form method="POST" action="{{ route('password.update') }}">
+                  <form method="POST">
                      <input type="hidden" name="token" value="{{ $token }}" />
 
                      <div class="form-group">
-                        <label for="email" class="form-label"
-                           >{{ __('Email Address') }}</label
+                        <label
+                           for="email"
+                           class="col-md-4 col-form-label text-md-end"
+                           >fdgfdbngfdb</label
                         >
-                        <input
-                           type="email"
-                           class="form-control"
-                           id="email"
-                           required
-                           autofocus
-                           placeholder="name@example.com" />
 
+                        <div class="col-md-6">
+                           <input
+                              id="email"
+                              type="email"
+                              class="form-control"
+                              name="email"
+                              required
+                              autocomplete="email"
+                              autofocus />
+
+                           <span class="invalid-feedback" role="alert">
+                              <strong></strong>
+                           </span>
+                        </div>
+                     </div>
+
+                     <div class="form-group">
+                        <label
+                           for="password"
+                           class="col-md-4 col-form-label text-md-end"
+                           >fgfdhfhgbfd</label
+                        >
+
+                        <div class="col-md-6">
+                           <input
+                              id="password"
+                              type="password"
+                              class="form-control"
+                              name="password"
+                              required
+                              autocomplete="new-password" />
+
+                           <span class="invalid-feedback" role="alert">
+                              <strong></strong>
+                           </span>
+                        </div>
+                     </div>
+
+                     <div class="row mb-3">
+                        <label
+                           for="password-confirm"
+                           class="col-md-4 col-form-label text-md-end"></label>
+
+                        <div class="col-md-6">
+                           <input
+                              id="password-confirm"
+                              type="password"
+                              class="form-control"
+                              name="password_confirmation"
+                              required
+                              autocomplete="new-password" />
+                        </div>
+                     </div>
+
+                     <div class="row mb-0">
+                        <div class="col-md-6 offset-md-4">
+                           <button
+                              type="submit"
+                              class="btn btn-primary"></button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+
+               <div class="form-body">
+                  <form>
+                     <div class="form-group">
+                        <label for="userLogin" class="form-label">Login</label>
+                        <input
+                           type="text"
+                           class="form-control"
+                           id="userLogin"
+                           placeholder="Your name" />
                         <span class="invalid-feedback" role="alert">
-                           <strong>{{ $message }}</strong>
+                           <strong>Ошибка</strong>
                         </span>
                      </div>
 
                      <div class="form-group">
-                        <label for="password" class="form-label"
-                           >{{ __('Password') }}</label
+                        <label for="userPass" class="form-label"
+                           >Password</label
                         >
                         <input
                            type="password"
                            class="form-control"
-                           id="password"
-                           name="password"
-                           required
-                           autocomplete="new-password" />
-
-                        <span class="invalid-feedback" role="alert">
-                           <strong>{{ $message }}</strong>
-                        </span>
+                           id="userPass" />
                      </div>
 
-                     <div class="form-group">
-                        <label for="password-confirm" class="form-label"
-                           >{{ __('Confirm Password') }}</label
+                     <p class="chenge-pass">
+                        <a
+                           href="#"
+                           class="chenge-pass__linck form-footer__linck"
+                           >Forgot your password?</a
                         >
-                        <input
-                           id="password-confirm"
-                           type="password"
-                           class="form-control"
-                           name="password_confirmation"
-                           required
-                           autocomplete="new-password" />
+                     </p>
 
-                        <span class="invalid-feedback" role="alert">
-                           <strong>{{ $message }}</strong>
-                        </span>
-                     </div>
+                     <div class="controls">
+                        <div class="beautiful-checkbox remember">
+                           <input
+                              type="checkbox"
+                              id="GoogleAuth"
+                              class="beautiful-checkbox__control" />
+                           <label
+                              for="GoogleAuth"
+                              class="beautiful-checkbox__label"
+                              >Remember me</label
+                           >
+                        </div>
 
-                     <div class="controls reset-pass">
-                        <a href="#" class="link-btn">Return to login</a>
+                        <a href="#" class="link-btn">Back</a>
 
                         <button type="submit" class="submit-btn">
-                           {{ __('Reset Password') }}
+                           Create acount
                         </button>
                      </div>
+                     <p class="form-footer">
+                        Already have an account?
+                        <a href="#" class="form-footer__linck"
+                           >Sign in instead</a
+                        >
+                     </p>
                   </form>
                </div>
             </section>

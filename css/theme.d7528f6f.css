@@ -7692,3 +7692,34 @@ table.payouts-table tbody td {
         margin-top: 20px;
     }
 }
+
+.risk-management {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 1.5s ease-in;
+}
+
+._show {
+    opacity: 1;
+    max-height: 900px;
+}
+
+._showLicense {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .9);
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+._showLicense a {
+    display: block;
+    margin: 0 auto;
+    max-width: 900px;
+}

@@ -361,7 +361,7 @@ function getRandomArbitrary(min, max) {
 
 let videoPlayer = document.querySelector('#player');
 
-videoPlayer.addEventListener('play', function() {
+videoPlayer?.addEventListener('play', function() {
 
   let playBtn = document.querySelector('.play .img');
 
@@ -398,4 +398,10 @@ for(let i = 0; i < filterBtn.length; i++) {
 }
 
 
+document.querySelector('#btnRisk')?.addEventListener('click', function() {
+  document.querySelector('.risk-management')?.classList.toggle("_show");
+});
 
+document.querySelector("#license")?.addEventListener('click', function() {
+  document.querySelector(".main-license")?.classList.toggle("_showLicense");
+})

@@ -31,8 +31,12 @@ function getChartsData(range) {
 
 window.onload = function () {
 
-  let { data, categories } = getChartsData(300)
-
+  // let { data, categories } = getChartsData(12);
+  let data = [4.7, 3.7, 2.9, 4.2, 5, 4.5, 2.1, 3.8, 2.9, 2.3, 5, 5];
+  let categories = [1680260968890, 1679659768890, 1679054968890, 1678450168890, 1677845368890, 1677240568890, 1676635768890, 1676030968890, 1675426168890, 1674821368890, 1674216568890, 1673611768890];
+  
+  console.log(data);
+  console.log(categories);
   
   var options = {
     series: [
@@ -147,10 +151,7 @@ window.onload = function () {
 
 let now = new Date() ;
   
-chart.zoomX(
-      now.setDate(now.getDate() - 7*7 ),
-      now
-)
+chart.zoomX(1673611768890, 1675426168890);
   
 
   document
@@ -182,23 +183,27 @@ chart.zoomX(
   document
   .querySelector("#setWeek")
   .addEventListener("click", function () {
-    let now = new Date() ;
+    // let now = new Date() ;
 
-    chart.zoomX(
-      now.setDate(now.getDate() - 7*7),
-      now
-    )
+    // chart.zoomX(
+    //   now.setDate(now.getDate() - 7*7),
+    //   now
+    // )
+
+    chart.zoomX(1673611768890, 1675426168890);
   });
 
   document
   .querySelector("#setMount")
   .addEventListener("click", function () {
-    let now = new Date() ;
+    // let now = new Date() ;
 
-    chart.zoomX(
-      now.setDate(now.getDate() - 12*7),
-      now
-    )
+    // chart.zoomX(
+    //   now.setDate(now.getDate() - 12*7),
+    //   now
+    // )
+
+    chart.zoomX(1673611768890, 1680260968890);
   });
 
   document

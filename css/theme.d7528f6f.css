@@ -7152,6 +7152,25 @@ table.payouts-table tbody td {
     opacity: 0;
 }
 
+.employee__social {
+    margin-top: -30px;
+    margin-bottom: 8px;
+}
+
+.employee__linck {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #EB00FF;
+    display: block;
+    margin-left: auto;
+    padding: 4px;
+}
+
+.employee__linck img {
+    margin-top: -2px;
+}
+
 @media (max-width: 1524px) {
     .employee__bio {
         flex-direction: column-reverse;
@@ -7692,3 +7711,51 @@ table.payouts-table tbody td {
         margin-top: 20px;
     }
 }
+
+.support {
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.support p{
+   margin-bottom: 14px;
+}
+
+.support__nav {
+    display: flex;
+   justify-content: center;
+   gap: 14px;
+}
+
+@media (min-width: 790px) {
+    .support_footer {
+        text-align: left;
+    }
+    
+    .support__nav_footer {
+        justify-content: start;
+    }  
+}
+
+
+.support__nav_item {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #EB00FF;
+    transition: all 0.4s ease-in;
+}
+
+.support__nav_item:first-child img {
+    margin-left: -2px;
+ }
+
+.support__nav_item img {
+    display: block;
+    width: 24px;
+    height: 24px;
+ }

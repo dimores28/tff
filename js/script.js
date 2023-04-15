@@ -61,9 +61,14 @@ window.onload = function () {
     grid: {
       xaxis: {
         lines: {
-          show: true
+            show: false
         }
-      }
+      },   
+      yaxis: {
+          lines: {
+              show: false
+          }
+      },
     },
     xaxis: {
       type: "datetime",
@@ -79,6 +84,7 @@ window.onload = function () {
     yaxis: {
       opposite: true,
       floating: false,
+      max: 7,
       labels: {
         style: {
           fontSize: '22px',
@@ -89,7 +95,7 @@ window.onload = function () {
         minWidth: 100,
         maxWidth: 160,
         formatter: function(val) {
-          return "%" + val.toFixed(2);
+          return val.toFixed(2) + "%"  ;
         },
       },
       title: {
@@ -116,6 +122,12 @@ window.onload = function () {
       },
       x: {
         format: 'dd MMM yyyy'
+      }
+    },
+    markers: {
+      size: 5,
+      hover: {
+        size: 9
       }
     },
     responsive: [{
@@ -370,7 +382,7 @@ videoPlayer.addEventListener('play', function() {
 
 
 
-// document.querySelector('.video-content').addEventListener('click', function(){
+// document.querySelector('.play .img').addEventListener('click', function(){
 //   let player = document.querySelector('#player');
 
 //   if( player.paused ) {

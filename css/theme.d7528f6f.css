@@ -7712,6 +7712,7 @@ table.payouts-table tbody td {
     }
 }
 
+<<<<<<< HEAD
 .support {
     text-align: center;
     padding-top: 14px;
@@ -7759,3 +7760,35 @@ table.payouts-table tbody td {
     width: 24px;
     height: 24px;
  }
+=======
+.risk-management {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 1.5s ease-in;
+}
+
+._show {
+    opacity: 1;
+    max-height: 900px;
+}
+
+._showLicense {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .9);
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+._showLicense a {
+    display: block;
+    margin: 0 auto;
+    max-width: 900px;
+}
+>>>>>>> 9b722701aed2acef75c323038caa6c994d707c39
